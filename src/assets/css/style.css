@@ -253,11 +253,12 @@ section + section { margin-top: 3.5rem; }
   height: 560px;
 }
 .leaflet-container { background: transparent !important; }
-.leaflet-control-zoom a {
+.leaflet-control-zoom a, .race-map-reset a {
   background: var(--page-bg, var(--bg));
   color: var(--fg);
   border-color: var(--border) !important;
 }
+.race-map-reset a { font-size: 1.1rem; line-height: 26px; }
 .leaflet-tooltip {
   background: var(--page-bg, var(--bg));
   color: var(--fg);

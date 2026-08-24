@@ -7,11 +7,16 @@ const token = process.env.RUNALYZE_TOKEN;
 const headers = { token, Accept: "application/json" };
 
 const PB_CATEGORIES = [
-  { distance: "5k", min: 4.5, max: 5.5 },
-  { distance: "10k", min: 9, max: 11 },
-  { distance: "Half Marathon", min: 20, max: 22.5 },
-  { distance: "Marathon", min: 40, max: 44 },
+  { distance: "5k", min: 4.5, max: 5.5, officialKm: 5 },
+  { distance: "10k", min: 9, max: 11, officialKm: 10 },
+  { distance: "Half Marathon", min: 20, max: 22.5, officialKm: 21.0975 },
+  { distance: "Marathon", min: 40, max: 44, officialKm: 42.195 },
 ];
+
+function officialDistanceFor(km) {
+  const cat = PB_CATEGORIES.find((c) => km >= c.min && km <= c.max);
+  return cat ? cat.officialKm : null;
+}
 
 async function loadCache() {
   try {
@@ -61,15 +66,19 @@ function formatTime(seconds) {
   return h > 0 ? `${h}:${pad(m)}:${pad(s)}` : `${m}:${pad(s)}`;
 }
 
+function bestTime(race) {
+  return race.official_time_s ?? race.duration_s;
+}
+
 function computePbs(races) {
   const pbs = [];
   for (const cat of PB_CATEGORIES) {
     const candidates = races.filter(
-      (r) => r.distance_km >= cat.min && r.distance_km <= cat.max && r.duration_s
+      (r) => r.distance_km >= cat.min && r.distance_km <= cat.max && bestTime(r)
     );
     if (!candidates.length) continue;
-    const best = candidates.reduce((a, b) => (a.duration_s < b.duration_s ? a : b));
-    pbs.push({ distance: cat.distance, time: formatTime(best.duration_s), note: "race" });
+    const best = candidates.reduce((a, b) => (bestTime(a) < bestTime(b) ? a : b));
+    pbs.push({ distance: cat.distance, time: formatTime(bestTime(best)), note: "race" });
   }
   return pbs;
 }
@@ -103,12 +112,19 @@ async function main() {
         fetched++;
         if (!point || !activity) continue;
 
+        // Runalyze's raceresult API has a schema bug: the documented
+        // "official_distance" (km) property collides with a separate
+        // "official time in seconds" property, and only the latter actually
+        // comes through in the JSON response. So r.official_distance here is
+        // really the official finish time, when the user has recorded one.
         races.push({
           activity_id: r.activity_id,
           date: r.date,
           name: r.name,
           distance_km: activity.distance,
+          official_distance_km: officialDistanceFor(activity.distance),
           duration_s: activity.duration,
+          official_time_s: r.official_distance ?? null,
           lat: point.lat,
           lon: point.lon,
         });
