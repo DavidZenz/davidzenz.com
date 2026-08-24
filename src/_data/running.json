@@ -1,11 +1,10 @@
 {
-  "_comment": "PLACEHOLDER — sources disagreed slightly on exact times; verify and correct before publishing. Strava live-activity integration to be wired in later (see /running/ page notes).",
+  "_comment": "5k/10k confirmed across sources. Marathon & half marathon are PLACEHOLDERS — the previous site had both listed as the identical 01:59:30, clearly a copy-paste artifact, so don't trust that number. Verify and correct before publishing.",
   "pbs": [
-    { "distance": "5k", "time": "17:32", "note": "road" },
-    { "distance": "5000m", "time": "17:35", "note": "track" },
-    { "distance": "10k", "time": "36:40", "note": "road" },
-    { "distance": "Half Marathon", "time": "1:19:53", "note": "road" },
-    { "distance": "Marathon", "time": "2:54:57", "note": "road" },
-    { "distance": "WRU 88k / 1700hm", "time": "10:07", "note": "ultra" }
+    { "distance": "5k", "time": "17:40", "note": "road" },
+    { "distance": "10k", "time": "36:41", "note": "road" },
+    { "distance": "Half Marathon", "time": "1:19:53", "note": "placeholder — verify" },
+    { "distance": "Marathon", "time": "2:54:57", "note": "placeholder — verify" },
+    { "distance": "88k", "time": "TBD", "note": "ultra" }
   ]
 }
