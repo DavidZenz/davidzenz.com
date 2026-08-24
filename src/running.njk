@@ -33,6 +33,16 @@ hero: true
     </table>
   </section>
 
+  {% if races.races.length %}
+  <section>
+    <h2>Races</h2>
+    <div id="race-map" data-races="{{ races.races | dump | escape }}"></div>
+  </section>
+  <link rel="stylesheet" href="/assets/vendor/leaflet/leaflet.css">
+  <script src="/assets/vendor/leaflet/leaflet.js"></script>
+  <script src="/assets/race-map.js"></script>
+  {% endif %}
+
   <section>
     <h2>Recent activity</h2>
     <p class="notice">

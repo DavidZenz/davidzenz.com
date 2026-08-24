@@ -246,6 +246,12 @@ section + section { margin-top: 3.5rem; }
 }
 .stat-label { color: var(--muted); font-size: .85rem; margin-top: .35rem; }
 
+#race-map {
+  height: 480px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
 table {
   width: 100%;
   border-collapse: collapse;

@@ -6,13 +6,17 @@
   "scripts": {
     "fetch:github": "node scripts/fetch-github.mjs",
     "fetch:gigs": "node scripts/fetch-gigs.mjs",
+    "fetch:races": "node scripts/fetch-races.mjs",
     "build:images": "node scripts/build-images.mjs",
-    "build": "npm run fetch:github && npm run fetch:gigs && npm run build:images && eleventy",
-    "start": "npm run fetch:github && npm run fetch:gigs && npm run build:images && eleventy --serve",
+    "build": "npm run fetch:github && npm run fetch:gigs && npm run fetch:races && npm run build:images && eleventy",
+    "start": "npm run fetch:github && npm run fetch:gigs && npm run fetch:races && npm run build:images && eleventy --serve",
     "serve": "eleventy --serve"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
     "sharp": "^0.35.3"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4"
   }
 }
