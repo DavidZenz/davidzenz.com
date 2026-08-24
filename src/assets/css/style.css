@@ -27,7 +27,7 @@
 body[data-theme="home"] { --hero-bg: #0b0b0b; --hero-fg: #f5f2ec; }
 body[data-theme="professional"] {
   --hero-fg: #1c1b19;
-  --page-bg: linear-gradient(160deg, #dcdedb 0%, #c7c8c5 45%, #adaeaa 100%);
+  --page-bg: linear-gradient(180deg, #d6d8d5 0%, #c7c8c5 30%, #b3b4b0 100%);
 }
 body[data-theme="professional"] .hero { background: transparent; }
 body[data-theme="music"] { --hero-bg: #0a0a0a; --hero-fg: #f5f2ec; --accent: #ff3b30; }
