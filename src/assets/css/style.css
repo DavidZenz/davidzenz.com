@@ -35,10 +35,6 @@ body[data-theme="running"] { --hero-bg: #fdeee1; --hero-fg: #1c1b19; --accent: #
 body[data-theme="code"] { --hero-bg: #0d0d10; --hero-fg: #f5f2ec; --accent: #ffb454; }
 
 @media (prefers-color-scheme: dark) {
-  body[data-theme="professional"] {
-    --hero-fg: #f3f1ed;
-    --page-bg: linear-gradient(160deg, #3d3e3b 0%, #302f2d 50%, #232220 100%);
-  }
   body[data-theme="running"] { --hero-bg: #2b1f16; --hero-fg: #f3f1ed; }
 }
 
