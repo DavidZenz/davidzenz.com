@@ -8,7 +8,7 @@ on:
   workflow_dispatch: {}
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -32,6 +32,15 @@ jobs:
           BANDSINTOWN_KEY_BREWTALITY: ${{ secrets.BANDSINTOWN_KEY_BREWTALITY }}
           BANDSINTOWN_KEY_METTERNICH: ${{ secrets.BANDSINTOWN_KEY_METTERNICH }}
           RUNALYZE_TOKEN: ${{ secrets.RUNALYZE_TOKEN }}
+      - name: Persist race data cache
+        run: |
+          if ! git diff --quiet -- src/_data/races.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add src/_data/races.json
+            git commit -m "chore: update cached race data"
+            git push
+          fi
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

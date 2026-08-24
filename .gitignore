@@ -3,5 +3,4 @@ _site/
 .DS_Store
 src/_data/github.json
 src/_data/gigs.json
-src/_data/races.json
 src/assets/images/
