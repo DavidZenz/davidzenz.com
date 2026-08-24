@@ -71,9 +71,15 @@
     zoomControl: true,
     attributionControl: false,
     worldCopyJump: true,
+    minZoom: 2,
+    maxBounds: [
+      [-85, -Infinity],
+      [85, Infinity],
+    ],
+    maxBoundsViscosity: 1,
   }).setView([20, 0], 2);
 
-  fetch("/assets/vendor/countries-110m.json")
+  fetch("/assets/vendor/countries-50m.json")
     .then(function (res) { return res.json(); })
     .then(function (topology) {
       var geojson = fixAntimeridian(topojson.feature(topology, topology.objects.countries));

@@ -5,7 +5,7 @@ export default function (eleventyConfig) {
     "node_modules/leaflet/dist/leaflet.css": "assets/vendor/leaflet/leaflet.css",
     "node_modules/leaflet/dist/leaflet.js": "assets/vendor/leaflet/leaflet.js",
     "node_modules/topojson-client/dist/topojson-client.min.js": "assets/vendor/topojson-client.min.js",
-    "node_modules/world-atlas/countries-110m.json": "assets/vendor/countries-110m.json",
+    "node_modules/world-atlas/countries-50m.json": "assets/vendor/countries-50m.json",
   });
 
   eleventyConfig.addFilter("year", () => new Date().getFullYear());
