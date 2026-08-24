@@ -4,24 +4,28 @@ title: Code
 permalink: /code/
 ---
 <div class="wrap">
+  <span class="eyebrow">GitHub</span>
   <h1>Code</h1>
   {% if github.user %}
-  <p class="lede">{{ github.user.publicRepos }} public repos, {{ github.user.followers }} followers on <a href="{{ github.user.htmlUrl }}">GitHub</a>.</p>
+  <p class="lede">{{ github.user.publicRepos }} public repos, {{ github.user.followers }} followers on <a class="link-underline" href="{{ github.user.htmlUrl }}">GitHub</a>.</p>
   {% else %}
   <p class="notice">GitHub data unavailable at build time — try again on the next deploy.</p>
   {% endif %}
 
   <section>
     <h2>Recently pushed</h2>
-    {% for repo in github.repos %}
-    <div class="card">
-      <strong><a href="{{ repo.url }}">{{ repo.name }}</a></strong>
-      {% if repo.language %}<span> · {{ repo.language }}</span>{% endif %}
-      {% if repo.stars %}<span> · ★ {{ repo.stars }}</span>{% endif %}
-      {% if repo.description %}<p>{{ repo.description }}</p>{% endif %}
-    </div>
-    {% else %}
-    <p class="notice">No repo data yet — run <code>npm run fetch:github</code> before building.</p>
-    {% endfor %}
+    <ul class="entry-list">
+      {% for repo in github.repos %}
+      <li class="entry">
+        <div class="entry-title"><a class="link-underline" href="{{ repo.url }}">{{ repo.name }}</a></div>
+        <div class="entry-meta">
+          {% if repo.language %}{{ repo.language }}{% endif %}{% if repo.stars %} · ★ {{ repo.stars }}{% endif %}
+          {% if repo.description %}<br>{{ repo.description }}{% endif %}
+        </div>
+      </li>
+      {% else %}
+      <li class="entry"><p class="notice">No repo data yet — run <code>npm run fetch:github</code> before building.</p></li>
+      {% endfor %}
+    </ul>
   </section>
 </div>

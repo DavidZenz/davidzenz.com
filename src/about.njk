@@ -2,16 +2,18 @@
 layout: base.njk
 title: About
 permalink: /about/
+theme: professional
 ---
-<section class="hero hero--grey">
+<section class="hero hero--photo-left">
   <div class="hero-wrap">
     <div class="hero-photo">
       <picture>
         <source type="image/avif" srcset="/assets/images/professional.avif">
-        <img src="/assets/images/professional.jpg" alt="David Zenz" width="675" height="900" loading="eager">
+        <img src="/assets/images/professional.jpg" alt="David Zenz" loading="eager">
       </picture>
     </div>
     <div class="hero-content">
+      <span class="eyebrow">About</span>
       <h1>David Zenz</h1>
       <p class="lede">{{ professional.role }}</p>
     </div>

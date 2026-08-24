@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ title or site.title }}{% if title %} — {{ site.title }}{% endif %}</title>
   <meta name="description" content="{{ description or site.description }}">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="icon" href="data:,">
 </head>
-<body>
+<body{% if theme %} data-theme="{{ theme }}"{% endif %}>
   {% include "header.njk" %}
   <main>
     {{ content | safe }}

@@ -2,13 +2,28 @@
 layout: base.njk
 title: Running
 permalink: /running/
+theme: running
 ---
+<section class="hero hero--photo-right">
+  <div class="hero-wrap">
+    <div class="hero-photo">
+      <picture>
+        <source type="image/avif" srcset="/assets/images/running_action.avif">
+        <img src="/assets/images/running_action.jpg" alt="David Zenz running on a track" loading="eager">
+      </picture>
+    </div>
+    <div class="hero-content">
+      <span class="eyebrow">Running</span>
+      <h1>Personal bests</h1>
+      <p class="lede">Marathon, half, 10k, 5k.</p>
+    </div>
+  </div>
+</section>
+
 <div class="wrap">
-  <h1>Running</h1>
   <p class="notice">{{ running._comment }}</p>
 
   <section>
-    <h2>Personal bests</h2>
     <table>
       <thead><tr><th>Distance</th><th>Time</th><th>Note</th></tr></thead>
       <tbody>
@@ -24,7 +39,7 @@ permalink: /running/
     <p class="notice">
       Live Strava data isn't wired in yet — it needs a one-time API app + OAuth setup on your end.
       Once you've got a client id/secret and refresh token, this section will pull recent runs
-      and weekly mileage at build time, the same way the <a href="/code/">Code</a> page pulls GitHub activity.
+      and weekly mileage at build time, the same way the <a class="link-underline" href="/code/">Code</a> page pulls GitHub activity.
     </p>
   </section>
 </div>

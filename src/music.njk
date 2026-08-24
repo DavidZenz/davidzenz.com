@@ -2,38 +2,56 @@
 layout: base.njk
 title: Music
 permalink: /music/
+theme: music
 ---
+<section class="hero hero--photo-right">
+  <div class="hero-wrap">
+    <div class="hero-photo">
+      <picture>
+        <source type="image/avif" srcset="/assets/images/music_action2.avif">
+        <img src="/assets/images/music_action2.jpg" alt="David Zenz playing bass on stage" loading="eager">
+      </picture>
+    </div>
+    <div class="hero-content">
+      <span class="eyebrow">Music</span>
+      <h1>Drums, accordion &amp; bass</h1>
+      <p class="lede">On stage since 2004.</p>
+    </div>
+  </div>
+</section>
+
 <div class="wrap">
-  <h1>Music</h1>
   <p class="notice">{{ music._comment }}</p>
 
-  <section>
-    <div class="grid">
-      <div class="card"><strong>{{ music.stats.concerts }}</strong><br>concerts</div>
-      <div class="card"><strong>{{ music.stats.albums }}</strong><br>albums</div>
-      <div class="card"><strong>{{ music.stats.videos }}</strong><br>videos</div>
-      <div class="card"><strong>{{ music.stats.songs }}</strong><br>songs written</div>
-    </div>
+  <section class="stat-row">
+    <div class="stat"><span class="stat-value">{{ music.stats.concerts }}</span><span class="stat-label">concerts</span></div>
+    <div class="stat"><span class="stat-value">{{ music.stats.albums }}</span><span class="stat-label">albums</span></div>
+    <div class="stat"><span class="stat-value">{{ music.stats.videos }}</span><span class="stat-label">videos</span></div>
+    <div class="stat"><span class="stat-value">{{ music.stats.songs }}</span><span class="stat-label">songs written</span></div>
   </section>
 
   <section>
     <h2>Current projects</h2>
-    {% for p in music.currentProjects %}
-    <div class="card">
-      <strong>{% if p.url %}<a href="{{ p.url }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}</strong>
-      <span> — {{ p.years }}</span>
-    </div>
-    {% endfor %}
+    <ul class="entry-list">
+      {% for p in music.currentProjects %}
+      <li class="entry">
+        <div class="entry-title">{% if p.url %}<a class="link-underline" href="{{ p.url }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}</div>
+        <div class="entry-meta">{{ p.years }}</div>
+      </li>
+      {% endfor %}
+    </ul>
   </section>
 
   <section>
     <h2>Past projects</h2>
-    {% for p in music.pastProjects %}
-    <div class="card">
-      <strong>{{ p.name }}</strong>
-      <span>{% if p.years %} — {{ p.years }}{% endif %}{% if p.role %} · {{ p.role }}{% endif %}</span>
-    </div>
-    {% endfor %}
+    <ul class="entry-list">
+      {% for p in music.pastProjects %}
+      <li class="entry">
+        <div class="entry-title">{{ p.name }}</div>
+        <div class="entry-meta">{% if p.years %}{{ p.years }}{% endif %}{% if p.role %} · {{ p.role }}{% endif %}</div>
+      </li>
+      {% endfor %}
+    </ul>
   </section>
 
   <section>
