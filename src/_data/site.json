@@ -1,0 +1,21 @@
+{
+  "title": "David Zenz",
+  "description": "Data scientist & statistician, musician, runner — Vienna, Austria.",
+  "url": "https://davidzenz.com",
+  "email": "office@davidzenz.com",
+  "location": "Vienna, Austria",
+  "_comment_social": "TODO: verify/fill in correct handles below — github confirmed live, others are unverified guesses and may be wrong.",
+  "social": {
+    "github": "https://github.com/davidzenz",
+    "linkedin": null,
+    "instagram": null,
+    "strava": null
+  },
+  "nav": [
+    { "text": "About", "url": "/about/" },
+    { "text": "Publications", "url": "/publications/" },
+    { "text": "Music", "url": "/music/" },
+    { "text": "Running", "url": "/running/" },
+    { "text": "Code", "url": "/code/" }
+  ]
+}

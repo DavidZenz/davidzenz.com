@@ -1,0 +1,33 @@
+{
+  "_comment": "PLACEHOLDER — these stats are carried over from the archived 2020 site and are known to be stale. Update the numbers below.",
+  "stats": {
+    "concerts": "250+",
+    "albums": 3,
+    "videos": 24,
+    "songs": 13
+  },
+  "training": [
+    { "years": "1990–1992", "what": "Musikalische Früherziehung", "where": "Franz Schmidt Musikschule Perchtoldsdorf" },
+    { "years": "1992–1994", "what": "Einführung Musik", "where": "Universität Wien" },
+    { "years": "1992–1994", "what": "Mandoline & Akkorden", "where": "Musikverein Tuma" },
+    { "years": "1994–1998", "what": "Akkordeon", "where": "Musikschule Wien 21" },
+    { "years": "1998–2003", "what": "Drums & Percussion", "where": "Musikschule Wien 22" },
+    { "years": "2003", "what": "E-Bass", "where": "Musikschule Wien 15" },
+    { "years": "2003–2015", "what": "Jazz Drums", "where": "Musikschule Wien 22" }
+  ],
+  "currentProjects": [
+    { "name": "Brewtality", "years": "2004–", "url": "https://www.brewtality.at" },
+    { "name": "Intergang", "years": "2010–", "url": "https://www.intergang.at" },
+    { "name": "Metternich", "years": "2017–", "url": "https://www.metternich.rocks" },
+    { "name": "Futonegro", "years": "2008–", "url": "https://www.futoneg.ro" },
+    { "name": "Megawhat?! / Army Winehome", "years": "2014–", "url": null }
+  ],
+  "pastProjects": [
+    { "name": "Alcohol Fueled Brewtality", "years": "1999–2004", "role": "predecessor of Brewtality" },
+    { "name": "John Rakete", "years": "2015–2016", "role": "Drums & Vocals" },
+    { "name": "Slingshot", "years": "2006–2007", "role": "E-Bass & Backing Vocals" },
+    { "name": "Austrian Cecilia Ensemble", "years": "2008", "role": "Drums & Percussion" },
+    { "name": "Wiener Walzertraum", "years": "2007", "role": "Drums & Percussion" },
+    { "name": "Akkordeonensemble / Akkordeonorchester / Ensemble / Orchester Tuma", "years": null, "role": "Accordion" }
+  ]
+}

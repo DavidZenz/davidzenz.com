@@ -1,0 +1,15 @@
+{
+  "name": "davidzenz-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static portfolio site for davidzenz.com",
+  "scripts": {
+    "fetch:github": "node scripts/fetch-github.mjs",
+    "build": "npm run fetch:github && eleventy",
+    "start": "npm run fetch:github && eleventy --serve",
+    "serve": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

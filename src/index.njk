@@ -1,0 +1,35 @@
+---
+layout: base.njk
+title: null
+---
+<div class="wrap">
+  <h1>David Zenz</h1>
+  <p class="lede">{{ site.description }}</p>
+
+  <section>
+    <div class="grid">
+      <div class="card">
+        <h3><a href="/about/">About</a></h3>
+        <p>{{ professional.role }}</p>
+      </div>
+      <div class="card">
+        <h3><a href="/music/">Music</a></h3>
+        <p>Drums, accordion &amp; bass across {{ music.currentProjects.length }} active bands.</p>
+      </div>
+      <div class="card">
+        <h3><a href="/running/">Running</a></h3>
+        <p>Marathon PB {{ running.pbs[4].time }}.</p>
+      </div>
+      <div class="card">
+        <h3><a href="/code/">Code</a></h3>
+        <p>
+          {% if github.user %}
+            {{ github.user.publicRepos }} public repos on GitHub.
+          {% else %}
+            Recent GitHub activity.
+          {% endif %}
+        </p>
+      </div>
+    </div>
+  </section>
+</div>

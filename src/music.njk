@@ -1,0 +1,47 @@
+---
+layout: base.njk
+title: Music
+permalink: /music/
+---
+<div class="wrap">
+  <h1>Music</h1>
+  <p class="notice">{{ music._comment }}</p>
+
+  <section>
+    <div class="grid">
+      <div class="card"><strong>{{ music.stats.concerts }}</strong><br>concerts</div>
+      <div class="card"><strong>{{ music.stats.albums }}</strong><br>albums</div>
+      <div class="card"><strong>{{ music.stats.videos }}</strong><br>videos</div>
+      <div class="card"><strong>{{ music.stats.songs }}</strong><br>songs written</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Current projects</h2>
+    {% for p in music.currentProjects %}
+    <div class="card">
+      <strong>{% if p.url %}<a href="{{ p.url }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}</strong>
+      <span> — {{ p.years }}</span>
+    </div>
+    {% endfor %}
+  </section>
+
+  <section>
+    <h2>Past projects</h2>
+    {% for p in music.pastProjects %}
+    <div class="card">
+      <strong>{{ p.name }}</strong>
+      <span>{% if p.years %} — {{ p.years }}{% endif %}{% if p.role %} · {{ p.role }}{% endif %}</span>
+    </div>
+    {% endfor %}
+  </section>
+
+  <section>
+    <h2>Training</h2>
+    <ul class="timeline">
+      {% for t in music.training %}
+      <li><span class="years">{{ t.years }}</span><span>{{ t.what }}, {{ t.where }}</span></li>
+      {% endfor %}
+    </ul>
+  </section>
+</div>

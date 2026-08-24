@@ -1,0 +1,15 @@
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-social">
+      {% if site.social.github %}<a href="{{ site.social.github }}">GitHub</a>{% endif %}
+      {% if site.social.linkedin %}<a href="{{ site.social.linkedin }}">LinkedIn</a>{% endif %}
+      {% if site.social.instagram %}<a href="{{ site.social.instagram }}">Instagram</a>{% endif %}
+      {% if site.social.strava %}<a href="{{ site.social.strava }}">Strava</a>{% endif %}
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+    </div>
+    <div class="footer-meta">
+      <span>&copy; {{ "" | year }} {{ site.title }}</span>
+      <a href="/imprint/">Imprint</a>
+    </div>
+  </div>
+</footer>

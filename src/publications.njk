@@ -1,0 +1,47 @@
+---
+layout: base.njk
+title: Publications
+permalink: /publications/
+---
+<div class="wrap">
+  <h1>Publications</h1>
+
+  <section>
+    <h2>Peer-reviewed</h2>
+    {% for pub in publications.peerReviewed %}
+    <div class="card">
+      <strong>{{ pub.title }}</strong><br>
+      <span>{{ pub.authors }}</span><br>
+      <span>{{ pub.venue }} — {{ pub.date }}</span>
+    </div>
+    {% endfor %}
+  </section>
+
+  <section>
+    <h2>wiiw Monthly Reports</h2>
+    {% for pub in publications.monthlyReports %}
+    <div class="card">
+      <strong>{{ pub.title }}</strong><br>
+      <span>{{ pub.venue }} — {{ pub.date }}</span>
+    </div>
+    {% endfor %}
+  </section>
+
+  <section>
+    <h2>Handbooks &amp; statistical reports</h2>
+    {% for pub in publications.handbooksAndReports %}
+    <div class="card">
+      <strong>{{ pub.title }}</strong><br>
+      <span>{{ pub.note }} — {{ pub.date }}</span>
+    </div>
+    {% endfor %}
+  </section>
+
+  <section>
+    <h2>Documents</h2>
+    <p class="notice">{{ publications._comment }}</p>
+    <ul>
+      {% for doc in publications.documents %}<li>{{ doc.title }}</li>{% endfor %}
+    </ul>
+  </section>
+</div>

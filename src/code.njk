@@ -1,0 +1,27 @@
+---
+layout: base.njk
+title: Code
+permalink: /code/
+---
+<div class="wrap">
+  <h1>Code</h1>
+  {% if github.user %}
+  <p class="lede">{{ github.user.publicRepos }} public repos, {{ github.user.followers }} followers on <a href="{{ github.user.htmlUrl }}">GitHub</a>.</p>
+  {% else %}
+  <p class="notice">GitHub data unavailable at build time — try again on the next deploy.</p>
+  {% endif %}
+
+  <section>
+    <h2>Recently pushed</h2>
+    {% for repo in github.repos %}
+    <div class="card">
+      <strong><a href="{{ repo.url }}">{{ repo.name }}</a></strong>
+      {% if repo.language %}<span> · {{ repo.language }}</span>{% endif %}
+      {% if repo.stars %}<span> · ★ {{ repo.stars }}</span>{% endif %}
+      {% if repo.description %}<p>{{ repo.description }}</p>{% endif %}
+    </div>
+    {% else %}
+    <p class="notice">No repo data yet — run <code>npm run fetch:github</code> before building.</p>
+    {% endfor %}
+  </section>
+</div>

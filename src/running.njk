@@ -1,0 +1,30 @@
+---
+layout: base.njk
+title: Running
+permalink: /running/
+---
+<div class="wrap">
+  <h1>Running</h1>
+  <p class="notice">{{ running._comment }}</p>
+
+  <section>
+    <h2>Personal bests</h2>
+    <table>
+      <thead><tr><th>Distance</th><th>Time</th><th>Note</th></tr></thead>
+      <tbody>
+        {% for pb in running.pbs %}
+        <tr><td>{{ pb.distance }}</td><td>{{ pb.time }}</td><td>{{ pb.note }}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Recent activity</h2>
+    <p class="notice">
+      Live Strava data isn't wired in yet — it needs a one-time API app + OAuth setup on your end.
+      Once you've got a client id/secret and refresh token, this section will pull recent runs
+      and weekly mileage at build time, the same way the <a href="/code/">Code</a> page pulls GitHub activity.
+    </p>
+  </section>
+</div>

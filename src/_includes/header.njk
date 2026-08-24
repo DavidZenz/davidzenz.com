@@ -1,0 +1,18 @@
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/">{{ site.title }}</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav">
+      {% for item in site.nav %}
+        <a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.text }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>
+<script>
+  document.querySelector(".nav-toggle").addEventListener("click", function () {
+    var nav = document.getElementById("site-nav");
+    var open = nav.classList.toggle("is-open");
+    this.setAttribute("aria-expanded", open);
+  });
+</script>

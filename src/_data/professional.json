@@ -1,0 +1,29 @@
+{
+  "role": "Data Scientist and Statistician at wiiw (Vienna Institute for International Economic Studies)",
+  "bio": "Develops and maintains interactive R Shiny applications and implements automated data pipelines, focusing on integrating large-scale international trade datasets into research. Manages statistical data for Estonia, Latvia, Lithuania, and Poland. Member of the wiiw Works Council.",
+  "researchInterests": [
+    "Time series econometrics",
+    "Forecasting",
+    "Agent-based macroeconomic modeling",
+    "Big data integration in economic research"
+  ],
+  "education": [
+    { "years": "Since 2016", "what": "MSc Statistics", "where": "University of Vienna" },
+    { "years": "Since 2013", "what": "MSc Economics", "where": "University of Vienna" },
+    { "years": null, "what": "BSc Economics", "where": "University of Vienna" },
+    { "years": null, "what": "Software Engineering", "where": "HTL Donaustadt" }
+  ],
+  "experience": [
+    { "years": "Since 2017", "what": "Statistician / Data Scientist", "where": "The Vienna Institute for International Economic Studies (wiiw)" },
+    { "years": "May–Jun 2016", "what": "Research Assistant", "where": "Vienna Center for Experimental Economics, University of Vienna" },
+    { "years": "Jan 2012", "what": "Project Staff / Student Assistant", "where": "Institute for Advanced Studies (IHS)" },
+    { "years": "May–Jun 2011", "what": "Project Staff / Student Assistant", "where": "Institute for Advanced Studies (IHS)" },
+    { "years": "2009–2016", "what": "Personal Assistant", "where": "WAG" },
+    { "years": "Feb–Apr 2007", "what": "Service Technician", "where": "Baumgartner Bürokommunikationstechnik" },
+    { "years": "2004–2005", "what": "Database Administrator", "where": "Internetreisen" }
+  ],
+  "civilianService": [
+    { "years": "2007–2008", "what": "Paramedic", "where": "Arbeiter-Samariter-Bund" }
+  ],
+  "otherInterests": ["Espresso", "Cooking", "European football", "Bouldering", "Snowboarding", "Photography"]
+}

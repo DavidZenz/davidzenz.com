@@ -1,0 +1,29 @@
+{
+  "peerReviewed": [
+    {
+      "title": "Wrapping input-output multipliers in confidence intervals",
+      "authors": "with A.F. Amores, J.M. Rueda-Cantuche, and R. Stehrer",
+      "venue": "Journal of Economic Structures, 13(17)",
+      "date": "October 2024",
+      "url": null
+    }
+  ],
+  "monthlyReports": [
+    {
+      "title": "Chart of the month: The China shock 2.0 arrives in CESEE",
+      "venue": "wiiw Monthly Report",
+      "date": "June 2026",
+      "url": null
+    }
+  ],
+  "handbooksAndReports": [
+    { "title": "wiiw Handbook of Statistics", "note": "co-authored, eight editions", "date": "2017–2020" },
+    { "title": "wiiw Statistical Reports", "note": "two reports", "date": "2020, 2024" }
+  ],
+  "documents": [
+    { "title": "Curriculum Vitae (PDF)", "url": null },
+    { "title": "List of Publications (PDF)", "url": null },
+    { "title": "List of Projects (PDF)", "url": null }
+  ],
+  "_comment": "PDFs linked from the wiiw profile page — fetch and host locally, or link out to wiiw.ac.at, once you confirm which."
+}

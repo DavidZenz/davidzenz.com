@@ -1,0 +1,51 @@
+---
+layout: base.njk
+title: About
+permalink: /about/
+---
+<div class="wrap">
+  <h1>About</h1>
+  <p class="lede">{{ professional.role }}</p>
+  <p>{{ professional.bio }}</p>
+
+  <section>
+    <h2>Research interests</h2>
+    <ul class="tags">
+      {% for item in professional.researchInterests %}<li>{{ item }}</li>{% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <ul class="timeline">
+      {% for item in professional.experience %}
+      <li><span class="years">{{ item.years }}</span><span>{{ item.what }}, {{ item.where }}</span></li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <ul class="timeline">
+      {% for item in professional.education %}
+      <li><span class="years">{{ item.years or "" }}</span><span>{{ item.what }}, {{ item.where }}</span></li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h2>Civilian service</h2>
+    <ul class="timeline">
+      {% for item in professional.civilianService %}
+      <li><span class="years">{{ item.years }}</span><span>{{ item.what }}, {{ item.where }}</span></li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h2>Also into</h2>
+    <ul class="tags">
+      {% for item in professional.otherInterests %}<li>{{ item }}</li>{% endfor %}
+    </ul>
+  </section>
+</div>
