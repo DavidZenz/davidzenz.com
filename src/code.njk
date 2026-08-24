@@ -2,12 +2,28 @@
 layout: base.njk
 title: Code
 permalink: /code/
+theme: code
+hero: true
 ---
+<section class="hero hero--photo-left">
+  <div class="hero-photo">
+    <picture>
+      <source type="image/avif" srcset="/assets/images/code.avif">
+      <img src="/assets/images/code.jpg" alt="David Zenz coding" loading="eager">
+    </picture>
+  </div>
+  <div class="hero-content">
+    <span class="eyebrow">GitHub</span>
+    <h1>Code</h1>
+    {% if github.user %}
+    <p class="lede">{{ github.user.publicRepos }} public repos on GitHub.</p>
+    {% endif %}
+  </div>
+</section>
+
 <div class="wrap">
-  <span class="eyebrow">GitHub</span>
-  <h1>Code</h1>
   {% if github.user %}
-  <p class="lede">{{ github.user.publicRepos }} public repos, {{ github.user.followers }} followers on <a class="link-underline" href="{{ github.user.htmlUrl }}">GitHub</a>.</p>
+  <p class="lede">{{ github.user.followers }} followers on <a class="link-underline" href="{{ github.user.htmlUrl }}">GitHub</a>.</p>
   {% else %}
   <p class="notice">GitHub data unavailable at build time — try again on the next deploy.</p>
   {% endif %}

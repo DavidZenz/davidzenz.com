@@ -1,12 +1,24 @@
 ---
 layout: base.njk
 title: null
+theme: home
+hero: true
 ---
-<div class="wrap--wide">
-  <span class="eyebrow">Vienna, Austria</span>
-  <h1>David Zenz</h1>
-  <p class="lede">{{ site.description }}</p>
+<section class="hero hero--photo-right">
+  <div class="hero-photo">
+    <picture>
+      <source type="image/avif" srcset="/assets/images/home.avif">
+      <img src="/assets/images/home.jpg" alt="David Zenz" loading="eager">
+    </picture>
+  </div>
+  <div class="hero-content">
+    <span class="eyebrow">Vienna, Austria</span>
+    <h1>David Zenz</h1>
+    <p class="lede">{{ site.description }}</p>
+  </div>
+</section>
 
+<div class="wrap--wide">
   <ul class="index-list" style="margin-top: 3rem;">
     <li>
       <a class="index-row" href="/about/">
