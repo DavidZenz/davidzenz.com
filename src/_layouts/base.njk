@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="icon" href="data:,">
 </head>
-<body{% if theme %} data-theme="{{ theme }}"{% endif %}>
+<body{% if theme %} data-theme="{{ theme }}"{% endif %}{% if hero %} class="has-hero"{% endif %}>
   {% include "header.njk" %}
   <main>
     {{ content | safe }}

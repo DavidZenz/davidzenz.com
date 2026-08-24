@@ -15,4 +15,14 @@
     var open = nav.classList.toggle("is-open");
     this.setAttribute("aria-expanded", open);
   });
+
+  (function () {
+    var header = document.querySelector(".site-header");
+    if (!document.body.classList.contains("has-hero")) return;
+    function onScroll() {
+      header.classList.toggle("is-scrolled", window.scrollY > window.innerHeight * 0.7);
+    }
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  })();
 </script>
