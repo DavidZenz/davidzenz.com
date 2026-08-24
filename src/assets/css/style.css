@@ -25,13 +25,20 @@
 
 /* Per-page theme accents (home / professional / music / running / code) */
 body[data-theme="home"] { --hero-bg: #0b0b0b; --hero-fg: #f5f2ec; }
-body[data-theme="professional"] { --hero-bg: #d9d7d2; --hero-fg: #1c1b19; }
+body[data-theme="professional"] {
+  --hero-fg: #1c1b19;
+  --page-bg: linear-gradient(160deg, #dcdedb 0%, #c7c8c5 45%, #adaeaa 100%);
+}
+body[data-theme="professional"] .hero { background: transparent; }
 body[data-theme="music"] { --hero-bg: #0a0a0a; --hero-fg: #f5f2ec; --accent: #ff3b30; }
 body[data-theme="running"] { --hero-bg: #fdeee1; --hero-fg: #1c1b19; --accent: #ff6a2b; }
 body[data-theme="code"] { --hero-bg: #0d0d10; --hero-fg: #f5f2ec; --accent: #ffb454; }
 
 @media (prefers-color-scheme: dark) {
-  body[data-theme="professional"] { --hero-bg: #35332f; --hero-fg: #f3f1ed; }
+  body[data-theme="professional"] {
+    --hero-fg: #f3f1ed;
+    --page-bg: linear-gradient(160deg, #3d3e3b 0%, #302f2d 50%, #232220 100%);
+  }
   body[data-theme="running"] { --hero-bg: #2b1f16; --hero-fg: #f3f1ed; }
 }
 
@@ -40,7 +47,7 @@ html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  background: var(--bg);
+  background: var(--page-bg, var(--bg));
   color: var(--fg);
   font-family: var(--sans);
   font-size: 17px;
