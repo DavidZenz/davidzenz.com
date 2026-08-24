@@ -292,7 +292,10 @@ td { font-family: var(--serif); font-size: 1.05rem; }
   overflow: hidden;
   display: flex;
   align-items: flex-end;
-  margin-bottom: 4.5rem;
+}
+.hero + .wrap, .hero + .wrap--wide,
+.segment + .wrap, .segment + .wrap--wide {
+  padding-top: 3.5rem;
 }
 .segment {
   position: relative;
