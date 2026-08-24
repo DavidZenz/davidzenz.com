@@ -2,3 +2,4 @@ node_modules/
 _site/
 .DS_Store
 src/_data/github.json
+src/assets/images/

@@ -5,11 +5,13 @@
   "description": "Static portfolio site for davidzenz.com",
   "scripts": {
     "fetch:github": "node scripts/fetch-github.mjs",
-    "build": "npm run fetch:github && eleventy",
-    "start": "npm run fetch:github && eleventy --serve",
+    "build:images": "node scripts/build-images.mjs",
+    "build": "npm run fetch:github && npm run build:images && eleventy",
+    "start": "npm run fetch:github && npm run build:images && eleventy --serve",
     "serve": "eleventy --serve"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@11ty/eleventy": "^3.0.0",
+    "sharp": "^0.35.3"
   }
 }

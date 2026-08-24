@@ -3,9 +3,22 @@ layout: base.njk
 title: About
 permalink: /about/
 ---
+<section class="hero hero--grey">
+  <div class="hero-wrap">
+    <div class="hero-photo">
+      <picture>
+        <source type="image/avif" srcset="/assets/images/professional.avif">
+        <img src="/assets/images/professional.jpg" alt="David Zenz" width="675" height="900" loading="eager">
+      </picture>
+    </div>
+    <div class="hero-content">
+      <h1>David Zenz</h1>
+      <p class="lede">{{ professional.role }}</p>
+    </div>
+  </div>
+</section>
+
 <div class="wrap">
-  <h1>About</h1>
-  <p class="lede">{{ professional.role }}</p>
   <p>{{ professional.bio }}</p>
 
   <section>
