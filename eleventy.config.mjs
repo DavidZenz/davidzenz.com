@@ -4,6 +4,10 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addFilter("year", () => new Date().getFullYear());
 
+  eleventyConfig.addFilter("gigDate", (iso) =>
+    new Date(iso).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" })
+  );
+
   return {
     dir: {
       input: "src",

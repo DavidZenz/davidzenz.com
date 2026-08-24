@@ -27,6 +27,17 @@ hero: true
     </picture>
   </div>
   <div class="hero-content">
+    {% if gigs.upcoming.length %}
+    <span class="eyebrow">Upcoming gigs</span>
+    <ul class="entry-list">
+      {% for g in gigs.upcoming %}
+      <li class="entry">
+        <div class="entry-title"><a class="link-underline" href="{{ g.url }}">{{ g.venue }}{% if g.city %}, {{ g.city }}{% endif %}</a></div>
+        <div class="entry-meta">{{ g.date | gigDate }} &middot; {{ g.artist }}</div>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
     <span class="eyebrow">Current projects</span>
     <h2>On stage now</h2>
     <ul class="entry-list">

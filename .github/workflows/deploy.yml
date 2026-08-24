@@ -29,6 +29,8 @@ jobs:
       - run: npm run build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BANDSINTOWN_KEY_BREWTALITY: ${{ secrets.BANDSINTOWN_KEY_BREWTALITY }}
+          BANDSINTOWN_KEY_METTERNICH: ${{ secrets.BANDSINTOWN_KEY_METTERNICH }}
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
