@@ -355,7 +355,7 @@ td { font-family: var(--serif); font-size: 1.05rem; }
   position: absolute;
   inset: 0 0 auto 0;
   height: 160px;
-  background: linear-gradient(to bottom, rgba(0,0,0,.5), transparent);
+  background: linear-gradient(to bottom in oklab, rgba(0,0,0,.5), transparent);
   z-index: 1;
   pointer-events: none;
 }
@@ -375,14 +375,14 @@ td { font-family: var(--serif); font-size: 1.05rem; }
 .hero--photo-left, .segment--photo-left { justify-content: flex-end; }
 .hero--photo-left .hero-photo, .segment--photo-left .hero-photo { left: 0; }
 .hero--photo-left .hero-photo img, .segment--photo-left .hero-photo img {
-  -webkit-mask-image: linear-gradient(to right, black 58%, transparent 97%);
-  mask-image: linear-gradient(to right, black 58%, transparent 97%);
+  -webkit-mask-image: linear-gradient(to right in oklab, black 58%, transparent 97%);
+  mask-image: linear-gradient(to right in oklab, black 58%, transparent 97%);
 }
 .hero--photo-right, .segment--photo-right { justify-content: flex-start; }
 .hero--photo-right .hero-photo, .segment--photo-right .hero-photo { right: 0; }
 .hero--photo-right .hero-photo img, .segment--photo-right .hero-photo img {
-  -webkit-mask-image: linear-gradient(to left, black 58%, transparent 97%);
-  mask-image: linear-gradient(to left, black 58%, transparent 97%);
+  -webkit-mask-image: linear-gradient(to left in oklab, black 58%, transparent 97%);
+  mask-image: linear-gradient(to left in oklab, black 58%, transparent 97%);
 }
 
 /* Full-width banner segment — for wide/landscape photos that shouldn't be cropped into a side column */
@@ -396,7 +396,7 @@ td { font-family: var(--serif); font-size: 1.05rem; }
   max-width: none;
   width: 100%;
   padding: 3rem clamp(1.5rem, 5vw, 4.5rem) 4rem;
-  background: linear-gradient(to top, rgba(0,0,0,.7) 0%, rgba(0,0,0,.25) 55%, transparent 100%);
+  background: linear-gradient(to top in oklab, rgba(0,0,0,.7) 0%, rgba(0,0,0,.25) 55%, transparent 100%);
   color: #f5f3ef;
 }
 
@@ -432,9 +432,9 @@ td { font-family: var(--serif); font-size: 1.05rem; }
     text-align: left !important;
     width: 100%;
     padding: 2.5rem 1.5rem 3rem;
-    background: linear-gradient(to top, color-mix(in srgb, var(--hero-bg) 92%, transparent) 20%, transparent 100%);
+    background: linear-gradient(to top in oklab, color-mix(in srgb, var(--hero-bg) 92%, transparent) 20%, transparent 100%);
   }
-  .segment--banner .hero-content { background: linear-gradient(to top, rgba(0,0,0,.75) 0%, rgba(0,0,0,.2) 55%, transparent 100%); }
+  .segment--banner .hero-content { background: linear-gradient(to top in oklab, rgba(0,0,0,.75) 0%, rgba(0,0,0,.2) 55%, transparent 100%); }
   .hero--photo-left .hero-content .timeline li, .segment--photo-left .hero-content .timeline li { flex-direction: row; }
 }
 
