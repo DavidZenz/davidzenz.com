@@ -26,12 +26,12 @@
 /* Per-page theme accents (home / professional / music / running / code) */
 body[data-theme="home"] { --hero-bg: #0b0b0b; --hero-fg: #f5f2ec; }
 body[data-theme="professional"] {
-  --fg: #f3f1ed;
-  --muted: #a8a49c;
-  --border: #33312e;
-  --surface: #1a1917;
-  --hero-fg: #f3f1ed;
-  --page-bg: linear-gradient(180deg, #1c1b19 0%, #131211 45%, #0b0b0a 100%);
+  --fg: #1c1b19;
+  --muted: #6f6b64;
+  --border: #e6e3de;
+  --surface: #f1efeb;
+  --hero-fg: #1c1b19;
+  --page-bg: linear-gradient(180deg, #d6d8d5 0%, #c7c8c5 30%, #b3b4b0 100%);
 }
 body[data-theme="professional"] .hero { background: transparent; }
 body[data-theme="music"] { --hero-bg: #0a0a0a; --hero-fg: #f5f2ec; --accent: #ff3b30; }
