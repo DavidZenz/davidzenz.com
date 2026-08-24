@@ -26,7 +26,7 @@ async function main() {
 
     await input
       .clone()
-      .avif({ quality: 55 })
+      .avif({ quality: 72 })
       .toFile(join(new URL(OUT_DIR).pathname, `${name}.avif`));
 
     await input
