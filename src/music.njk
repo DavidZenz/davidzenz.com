@@ -19,18 +19,16 @@ hero: true
   </div>
 </section>
 
-<div class="wrap">
-  <p class="notice">{{ music._comment }}</p>
-
-  <section class="stat-row">
-    <div class="stat"><span class="stat-value">{{ music.stats.concerts }}</span><span class="stat-label">concerts</span></div>
-    <div class="stat"><span class="stat-value">{{ music.stats.albums }}</span><span class="stat-label">albums</span></div>
-    <div class="stat"><span class="stat-value">{{ music.stats.videos }}</span><span class="stat-label">videos</span></div>
-    <div class="stat"><span class="stat-value">{{ music.stats.songs }}</span><span class="stat-label">songs written</span></div>
-  </section>
-
-  <section>
-    <h2>Current projects</h2>
+<section class="segment segment--photo-left">
+  <div class="hero-photo">
+    <picture>
+      <source type="image/avif" srcset="/assets/images/music_action.avif">
+      <img src="/assets/images/music_action.jpg" alt="David Zenz mid-headbang on stage" loading="lazy">
+    </picture>
+  </div>
+  <div class="hero-content">
+    <span class="eyebrow">Current projects</span>
+    <h2>On stage now</h2>
     <ul class="entry-list">
       {% for p in music.currentProjects %}
       <li class="entry">
@@ -39,8 +37,47 @@ hero: true
       </li>
       {% endfor %}
     </ul>
-  </section>
+  </div>
+</section>
 
+<section class="segment segment--banner">
+  <div class="hero-photo">
+    <picture>
+      <source type="image/avif" srcset="/assets/images/music_action3.avif">
+      <img src="/assets/images/music_action3.jpg" alt="Full band on stage at a festival" loading="lazy">
+    </picture>
+  </div>
+  <div class="hero-content">
+    <span class="eyebrow">By the numbers</span>
+    <div class="stat-row">
+      <div class="stat"><span class="stat-value">{{ music.stats.concerts }}</span><span class="stat-label">concerts</span></div>
+      <div class="stat"><span class="stat-value">{{ music.stats.albums }}</span><span class="stat-label">albums</span></div>
+      <div class="stat"><span class="stat-value">{{ music.stats.videos }}</span><span class="stat-label">videos</span></div>
+      <div class="stat"><span class="stat-value">{{ music.stats.songs }}</span><span class="stat-label">songs written</span></div>
+    </div>
+    <p class="notice" style="margin-top:1.5rem;">{{ music._comment }}</p>
+  </div>
+</section>
+
+<section class="segment segment--photo-right">
+  <div class="hero-photo">
+    <picture>
+      <source type="image/avif" srcset="/assets/images/music_action4.avif">
+      <img src="/assets/images/music_action4.jpg" alt="David Zenz performing intensely on stage" loading="lazy">
+    </picture>
+  </div>
+  <div class="hero-content">
+    <span class="eyebrow">Training</span>
+    <h2>1990&ndash;2015</h2>
+    <ul class="timeline">
+      {% for t in music.training %}
+      <li><span class="years">{{ t.years }}</span><span>{{ t.what }}, {{ t.where }}</span></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<div class="wrap" style="padding-top: 4rem;">
   <section>
     <h2>Past projects</h2>
     <ul class="entry-list">
@@ -49,15 +86,6 @@ hero: true
         <div class="entry-title">{{ p.name }}</div>
         <div class="entry-meta">{% if p.years %}{{ p.years }}{% endif %}{% if p.role %} · {{ p.role }}{% endif %}</div>
       </li>
-      {% endfor %}
-    </ul>
-  </section>
-
-  <section>
-    <h2>Training</h2>
-    <ul class="timeline">
-      {% for t in music.training %}
-      <li><span class="years">{{ t.years }}</span><span>{{ t.what }}, {{ t.where }}</span></li>
       {% endfor %}
     </ul>
   </section>

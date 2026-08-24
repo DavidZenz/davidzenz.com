@@ -5,7 +5,8 @@ import sharp from "sharp";
 const SRC_DIR = new URL("../images-src/", import.meta.url);
 const OUT_DIR = new URL("../src/assets/images/", import.meta.url);
 
-const WIDTH = 1000;
+const PORTRAIT_WIDTH = 1000;
+const LANDSCAPE_HEIGHT = 1100;
 
 async function main() {
   await mkdir(OUT_DIR, { recursive: true });
@@ -15,10 +16,13 @@ async function main() {
 
   for (const file of files) {
     const name = basename(file, extname(file));
-    const input = sharp(new URL(file, SRC_DIR).pathname).resize({
-      width: WIDTH,
-      withoutEnlargement: true,
-    });
+    const srcPath = new URL(file, SRC_DIR).pathname;
+    const meta = await sharp(srcPath).metadata();
+    const isLandscape = meta.width > meta.height;
+    const resizeOpts = isLandscape
+      ? { height: LANDSCAPE_HEIGHT, withoutEnlargement: true }
+      : { width: PORTRAIT_WIDTH, withoutEnlargement: true };
+    const input = sharp(srcPath).resize(resizeOpts);
 
     await input
       .clone()

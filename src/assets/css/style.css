@@ -294,6 +294,17 @@ td { font-family: var(--serif); font-size: 1.05rem; }
   align-items: flex-end;
   margin-bottom: 4.5rem;
 }
+.segment {
+  position: relative;
+  width: 100%;
+  min-height: 100svh;
+  min-height: 100vh;
+  background: var(--hero-bg, var(--surface));
+  color: var(--hero-fg, var(--fg));
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
 .hero::before {
   content: "";
   position: absolute;
@@ -316,17 +327,32 @@ td { font-family: var(--serif); font-size: 1.05rem; }
   object-fit: cover;
   object-position: center;
 }
-.hero--photo-left { justify-content: flex-end; }
-.hero--photo-left .hero-photo { left: 0; }
-.hero--photo-left .hero-photo img {
+.hero--photo-left, .segment--photo-left { justify-content: flex-end; }
+.hero--photo-left .hero-photo, .segment--photo-left .hero-photo { left: 0; }
+.hero--photo-left .hero-photo img, .segment--photo-left .hero-photo img {
   -webkit-mask-image: linear-gradient(to right, black 58%, transparent 97%);
   mask-image: linear-gradient(to right, black 58%, transparent 97%);
 }
-.hero--photo-right { justify-content: flex-start; }
-.hero--photo-right .hero-photo { right: 0; }
-.hero--photo-right .hero-photo img {
+.hero--photo-right, .segment--photo-right { justify-content: flex-start; }
+.hero--photo-right .hero-photo, .segment--photo-right .hero-photo { right: 0; }
+.hero--photo-right .hero-photo img, .segment--photo-right .hero-photo img {
   -webkit-mask-image: linear-gradient(to left, black 58%, transparent 97%);
   mask-image: linear-gradient(to left, black 58%, transparent 97%);
+}
+
+/* Full-width banner segment — for wide/landscape photos that shouldn't be cropped into a side column */
+.segment--banner { align-items: flex-end; justify-content: flex-start; }
+.segment--banner .hero-photo { position: absolute; inset: 0; width: 100%; }
+.segment--banner .hero-photo img {
+  width: 100%; height: 100%; object-fit: cover; object-position: center 32%;
+  -webkit-mask-image: none; mask-image: none;
+}
+.segment--banner .hero-content {
+  max-width: none;
+  width: 100%;
+  padding: 3rem clamp(1.5rem, 5vw, 4.5rem) 4rem;
+  background: linear-gradient(to top, rgba(0,0,0,.7) 0%, rgba(0,0,0,.25) 55%, transparent 100%);
+  color: #f5f3ef;
 }
 
 .hero-content {
@@ -334,17 +360,26 @@ td { font-family: var(--serif); font-size: 1.05rem; }
   z-index: 2;
   padding: 0 clamp(1.5rem, 5vw, 4.5rem) 4.5rem;
   max-width: 30rem;
+  color: var(--hero-fg, var(--fg));
 }
-.hero--photo-left .hero-content { text-align: right; }
+.hero-content h2 { font-size: clamp(2rem, 4.5vw, 3.2rem); font-weight: 700; margin-bottom: 1rem; }
+.hero-content .entry-title, .hero-content h3, .hero-content .stat-value { color: inherit; }
+.hero-content .entry-meta, .hero-content .timeline .years, .hero-content .stat-label { color: inherit; opacity: .65; }
+.hero-content .notice { color: inherit; opacity: .8; background: transparent; border-left-color: currentColor; }
+.hero-content .entry, .hero-content .timeline li { border-bottom-color: color-mix(in srgb, currentColor 22%, transparent); }
+.hero-content a.link-underline { color: inherit; }
+.hero--photo-left .hero-content, .segment--photo-left .hero-content { text-align: right; }
+.hero--photo-left .hero-content .timeline li, .segment--photo-left .hero-content .timeline li { flex-direction: row-reverse; }
 .hero-content h1 { margin-bottom: .6rem; }
 .hero-content .lede { color: inherit; opacity: .78; font-style: italic; }
 
 @media (max-width: 780px) {
-  .hero { align-items: flex-end; min-height: 92svh; min-height: 92vh; }
-  .hero--photo-left, .hero--photo-right { justify-content: flex-start; }
+  .hero, .segment { align-items: flex-end; min-height: 92svh; min-height: 92vh; }
+  .hero--photo-left, .hero--photo-right, .segment--photo-left, .segment--photo-right { justify-content: flex-start; }
   .hero-photo { width: 100%; left: 0; right: 0; }
   .hero-photo img { object-position: center 25%; }
-  .hero--photo-left .hero-photo img, .hero--photo-right .hero-photo img {
+  .hero--photo-left .hero-photo img, .hero--photo-right .hero-photo img,
+  .segment--photo-left .hero-photo img, .segment--photo-right .hero-photo img {
     -webkit-mask-image: none; mask-image: none;
   }
   .hero-content {
@@ -354,6 +389,8 @@ td { font-family: var(--serif); font-size: 1.05rem; }
     padding: 2.5rem 1.5rem 3rem;
     background: linear-gradient(to top, color-mix(in srgb, var(--hero-bg) 92%, transparent) 20%, transparent 100%);
   }
+  .segment--banner .hero-content { background: linear-gradient(to top, rgba(0,0,0,.75) 0%, rgba(0,0,0,.2) 55%, transparent 100%); }
+  .hero--photo-left .hero-content .timeline li, .segment--photo-left .hero-content .timeline li { flex-direction: row; }
 }
 
 /* Footer */
