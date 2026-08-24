@@ -20,28 +20,18 @@ hero: true
 </section>
 
 <div class="wrap">
-  <p class="notice">{{ running._comment }}</p>
+  {% if not races.pbs.length %}<p class="notice">{{ running._comment }}</p>{% endif %}
 
   <section>
     <table>
       <thead><tr><th>Distance</th><th>Time</th><th>Note</th></tr></thead>
       <tbody>
-        {% for pb in running.pbs %}
+        {% for pb in running.pbs | mergePbs(races.pbs) %}
         <tr><td>{{ pb.distance }}</td><td>{{ pb.time }}</td><td>{{ pb.note }}</td></tr>
         {% endfor %}
       </tbody>
     </table>
   </section>
-
-  {% if races.races.length %}
-  <section>
-    <h2>Races</h2>
-    <div id="race-map" data-races="{{ races.races | dump | escape }}"></div>
-  </section>
-  <link rel="stylesheet" href="/assets/vendor/leaflet/leaflet.css">
-  <script src="/assets/vendor/leaflet/leaflet.js"></script>
-  <script src="/assets/race-map.js"></script>
-  {% endif %}
 
   <section>
     <h2>Recent activity</h2>
@@ -52,3 +42,14 @@ hero: true
     </p>
   </section>
 </div>
+
+{% if races.races.length %}
+<section class="race-map-section">
+  <div class="wrap"><h2>Races</h2></div>
+  <div id="race-map" data-races="{{ races.races | dump | escape }}"></div>
+</section>
+<link rel="stylesheet" href="/assets/vendor/leaflet/leaflet.css">
+<script src="/assets/vendor/leaflet/leaflet.js"></script>
+<script src="/assets/vendor/topojson-client.min.js"></script>
+<script src="/assets/race-map.js"></script>
+{% endif %}

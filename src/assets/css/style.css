@@ -246,11 +246,28 @@ section + section { margin-top: 3.5rem; }
 }
 .stat-label { color: var(--muted); font-size: .85rem; margin-top: .35rem; }
 
+.race-map-section { padding: 2rem 0; }
+.race-map-section .wrap h2 { margin-bottom: 1.5rem; }
 #race-map {
-  height: 480px;
-  border-radius: 6px;
-  border: 1px solid var(--border);
+  width: 100%;
+  height: 560px;
 }
+.leaflet-container { background: transparent !important; }
+.leaflet-control-zoom a {
+  background: var(--page-bg, var(--bg));
+  color: var(--fg);
+  border-color: var(--border) !important;
+}
+.leaflet-tooltip {
+  background: var(--page-bg, var(--bg));
+  color: var(--fg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-family: var(--sans);
+  font-size: .82rem;
+  box-shadow: none;
+}
+.leaflet-tooltip-top:before { border-top-color: var(--border); }
 
 table {
   width: 100%;

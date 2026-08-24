@@ -6,6 +6,13 @@ const OUT_FILE = new URL("races.json", OUT_DIR);
 const token = process.env.RUNALYZE_TOKEN;
 const headers = { token, Accept: "application/json" };
 
+const PB_CATEGORIES = [
+  { distance: "5k", min: 4.5, max: 5.5 },
+  { distance: "10k", min: 9, max: 11 },
+  { distance: "Half Marathon", min: 20, max: 22.5 },
+  { distance: "Marathon", min: 40, max: 44 },
+];
+
 async function loadCache() {
   try {
     const raw = await readFile(OUT_FILE, "utf-8");
@@ -37,6 +44,36 @@ async function fetchStartPoint(activityId) {
   return { lat: parseFloat(match[1]), lon: parseFloat(match[2]) };
 }
 
+async function fetchActivity(activityId) {
+  try {
+    return await fetchJson(`https://runalyze.com/api/v1/activity/${activityId}`);
+  } catch {
+    return null;
+  }
+}
+
+function formatTime(seconds) {
+  const total = Math.round(seconds);
+  const h = Math.floor(total / 3600);
+  const m = Math.floor((total % 3600) / 60);
+  const s = total % 60;
+  const pad = (n) => String(n).padStart(2, "0");
+  return h > 0 ? `${h}:${pad(m)}:${pad(s)}` : `${m}:${pad(s)}`;
+}
+
+function computePbs(races) {
+  const pbs = [];
+  for (const cat of PB_CATEGORIES) {
+    const candidates = races.filter(
+      (r) => r.distance_km >= cat.min && r.distance_km <= cat.max && r.duration_s
+    );
+    if (!candidates.length) continue;
+    const best = candidates.reduce((a, b) => (a.duration_s < b.duration_s ? a : b));
+    pbs.push({ distance: cat.distance, time: formatTime(best.duration_s), note: "race" });
+  }
+  return pbs;
+}
+
 async function main() {
   await mkdir(OUT_DIR, { recursive: true });
 
@@ -54,18 +91,24 @@ async function main() {
         if (!r.activity_id || !r.name) continue;
 
         const cached = cache.get(r.activity_id);
-        let point = cached ? { lat: cached.lat, lon: cached.lon } : null;
-        if (!point) {
-          point = await fetchStartPoint(r.activity_id);
-          fetched++;
+        if (cached) {
+          races.push(cached);
+          continue;
         }
-        if (!point) continue;
+
+        const [point, activity] = await Promise.all([
+          fetchStartPoint(r.activity_id),
+          fetchActivity(r.activity_id),
+        ]);
+        fetched++;
+        if (!point || !activity) continue;
 
         races.push({
           activity_id: r.activity_id,
           date: r.date,
           name: r.name,
-          distance: r.official_distance,
+          distance_km: activity.distance,
+          duration_s: activity.duration,
           lat: point.lat,
           lon: point.lon,
         });
@@ -76,11 +119,11 @@ async function main() {
     }
   }
 
-  const data = { fetchedAt: new Date().toISOString(), races };
+  const data = { fetchedAt: new Date().toISOString(), races, pbs: computePbs(races) };
 
   await writeFile(OUT_FILE, JSON.stringify(data, null, 2));
   console.log(
-    `[fetch-races] wrote ${data.races.length} races (${fetched} newly fetched) to ${OUT_FILE.pathname}`
+    `[fetch-races] wrote ${data.races.length} races (${fetched} newly fetched), ${data.pbs.length} PBs to ${OUT_FILE.pathname}`
   );
 }
 
