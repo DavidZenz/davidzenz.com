@@ -195,6 +195,7 @@ main > .wrap:first-child,
 main > .wrap--wide:first-child { padding-top: 3.5rem; }
 
 section + section { margin-top: 3.5rem; }
+.hero + section, .segment + section { margin-top: 0; }
 
 /* Editorial index (home page) */
 .index-list { list-style: none; margin: 0; padding: 0; }
@@ -416,11 +417,18 @@ td { font-family: var(--serif); font-size: 1.05rem; }
   width: 100%; height: 100%; object-fit: cover; object-position: center 32%;
   -webkit-mask-image: none; mask-image: none;
 }
+.segment--banner .hero-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top in oklab, rgba(0,0,0,.88) 0%, rgba(0,0,0,.6) 30%, rgba(0,0,0,.2) 60%, transparent 85%);
+  pointer-events: none;
+}
 .segment--banner .hero-content {
   max-width: none;
   width: 100%;
   padding: 3rem clamp(1.5rem, 5vw, 4.5rem) 4rem;
-  background: linear-gradient(to top in oklab, rgba(0,0,0,.7) 0%, rgba(0,0,0,.25) 55%, transparent 100%);
+  background: linear-gradient(to top in oklab, rgba(0,0,0,.55) 0%, rgba(0,0,0,.35) 55%, transparent 100%);
   color: #f5f3ef;
 }
 

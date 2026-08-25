@@ -1,7 +1,7 @@
 {
-  "_comment": "PLACEHOLDER — these stats are carried over from the archived 2020 site and are known to be stale. Update the numbers below.",
+  "_comment": "concerts = archived gig counts from metternich.rocks/gigs (70), intergang.at/gigs (14) and brewtality.at/gigs (168), as of 2026-08-25, plus estimated counts for projects without a gig archive: MV Tuma 2/yr 1994-2022 (58), Wiener Walzertraum (4), Slingshot (8), John Rakete (2), Austrian Cecilia Ensemble (1), Futonegro (15). Excludes Mägawhat?! and any unlogged shows, so treat as a floor.",
   "stats": {
-    "concerts": "250+",
+    "concerts": "340+",
     "albums": 3,
     "videos": 24,
     "songs": 13
