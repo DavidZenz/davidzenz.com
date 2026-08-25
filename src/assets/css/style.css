@@ -235,6 +235,19 @@ section + section { margin-top: 3.5rem; }
 .entry-title { font-family: var(--serif); font-weight: 600; font-size: 1.15rem; }
 .entry-meta { color: var(--muted); font-size: .9rem; margin-top: .2rem; }
 
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 2rem;
+}
+.project-grid .entry { padding: 1rem 0; }
+.project-grid .entry:nth-child(-n+3) { padding-top: 0; }
+@media (max-width: 640px) {
+  .project-grid { grid-template-columns: repeat(2, 1fr); }
+  .project-grid .entry:nth-child(-n+3) { padding-top: 1rem; }
+  .project-grid .entry:nth-child(-n+2) { padding-top: 0; }
+}
+
 .stat-row {
   display: flex;
   flex-wrap: wrap;

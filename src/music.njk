@@ -29,7 +29,6 @@ hero: true
   <div class="hero-content">
     {% if gigs.upcoming.length %}
     <span class="eyebrow">Upcoming gigs</span>
-    <h2>Upcoming gigs</h2>
     <ul class="entry-list">
       {% for g in gigs.upcoming %}
       <li class="entry">
@@ -40,7 +39,7 @@ hero: true
     </ul>
     {% endif %}
     <span class="eyebrow">Current projects</span>
-    <ul class="entry-list">
+    <ul class="entry-list project-grid">
       {% for p in music.currentProjects %}
       <li class="entry">
         <div class="entry-title">{% if p.url %}<a class="link-underline" href="{{ p.url }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}</div>
