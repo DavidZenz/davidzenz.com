@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-25T11:08:46.131Z",
+  "fetchedAt": "2026-08-25T11:11:09.103Z",
   "races": [
     {
       "activity_id": 1063077,
@@ -754,7 +754,7 @@
       "date": "2024-03-10",
       "name": "Vienna Calling Halbmarathon",
       "distance_km": 28.02,
-      "official_distance_km": null,
+      "official_distance_km": 21.0975,
       "duration_s": 7027,
       "official_time_s": 4793,
       "lat": 48.227344,
@@ -928,7 +928,7 @@
     },
     {
       "distance": "Half Marathon",
-      "time": "1:21:55",
+      "time": "1:19:53",
       "note": "race"
     },
     {

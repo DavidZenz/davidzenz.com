@@ -13,9 +13,24 @@ const PB_CATEGORIES = [
   { distance: "Marathon", min: 40, max: 44, officialKm: 42.195 },
 ];
 
-function officialDistanceFor(km) {
-  const cat = PB_CATEGORIES.find((c) => km >= c.min && km <= c.max);
-  return cat ? cat.officialKm : null;
+function categoryFromName(name) {
+  const n = name.toLowerCase();
+  if (/halbmarathon|half[\s-]*marathon|\bhm\b/.test(n)) return "Half Marathon";
+  if (/\bmarathon\b/.test(n) && !/halb|half/.test(n)) return "Marathon";
+  if (/\b10\s*k(m)?\b/.test(n)) return "10k";
+  if (/\b5\s*k(m)?\b/.test(n)) return "5k";
+  return null;
+}
+
+// GPS-recorded distance can be way off official distance (watch kept
+// running past the finish, warm-up/cool-down included, etc). If the
+// distance doesn't land in a category's range, fall back to the race
+// name — Runalyze race names reliably say "Marathon"/"Halbmarathon"/etc.
+function officialDistanceFor(km, name = "") {
+  const byDistance = PB_CATEGORIES.find((c) => km >= c.min && km <= c.max);
+  if (byDistance) return byDistance.officialKm;
+  const byName = PB_CATEGORIES.find((c) => c.distance === categoryFromName(name));
+  return byName ? byName.officialKm : null;
 }
 
 async function loadCache() {
@@ -74,7 +89,7 @@ function computePbs(races) {
   const pbs = [];
   for (const cat of PB_CATEGORIES) {
     const candidates = races.filter(
-      (r) => r.distance_km >= cat.min && r.distance_km <= cat.max && bestTime(r)
+      (r) => r.official_distance_km === cat.officialKm && bestTime(r)
     );
     if (!candidates.length) continue;
     const best = candidates.reduce((a, b) => (bestTime(a) < bestTime(b) ? a : b));
@@ -147,6 +162,7 @@ async function main() {
     }
   }
 
+  races = races.map((r) => ({ ...r, official_distance_km: officialDistanceFor(r.distance_km, r.name) }));
   races = dedupeRaces(races);
 
   const data = { fetchedAt: new Date().toISOString(), races, pbs: computePbs(races) };
