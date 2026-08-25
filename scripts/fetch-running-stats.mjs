@@ -69,11 +69,13 @@ function computeDistanceStats(runs) {
   let total = 0;
 
   for (const run of runs) {
+    const distance = Number(run.distance);
+    if (!Number.isFinite(distance)) continue;
     const date = localDate(run.date_time);
-    total += run.distance;
-    if (date >= monday) thisWeek += run.distance;
-    if (date.startsWith(thisMonth)) month += run.distance;
-    if (date.startsWith(thisYear)) year += run.distance;
+    total += distance;
+    if (date >= monday) thisWeek += distance;
+    if (date.startsWith(thisMonth)) month += distance;
+    if (date.startsWith(thisYear)) year += distance;
   }
 
   return {

@@ -42,13 +42,13 @@ hero: true
     </p>
     {% endif %}
     <div class="stat-row">
-      <div class="stat"><span class="stat-value">{{ runningStats.distanceKm.thisWeek }}</span><span class="stat-label">km this week</span></div>
-      <div class="stat"><span class="stat-value">{{ runningStats.distanceKm.thisMonth }}</span><span class="stat-label">km this month</span></div>
-      <div class="stat"><span class="stat-value">{{ runningStats.distanceKm.thisYear }}</span><span class="stat-label">km this year</span></div>
-      <div class="stat"><span class="stat-value">{{ runningStats.distanceKm.total }}</span><span class="stat-label">km total</span></div>
-      <div class="stat"><span class="stat-value">{{ runningStats.raceCount }}</span><span class="stat-label">races</span></div>
-      <div class="stat"><span class="stat-value">{{ runningStats.marathonCount }}</span><span class="stat-label">marathons</span></div>
-      <div class="stat"><span class="stat-value">{{ runningStats.majorCount }}</span><span class="stat-label">marathon majors</span></div>
+      <div class="stat"><span class="stat-value">{{ runningStats.distanceKm.thisWeek | commas }}</span><span class="stat-label">km this week</span></div>
+      <div class="stat"><span class="stat-value">{{ runningStats.distanceKm.thisMonth | commas }}</span><span class="stat-label">km this month</span></div>
+      <div class="stat"><span class="stat-value">{{ runningStats.distanceKm.thisYear | commas }}</span><span class="stat-label">km this year</span></div>
+      <div class="stat"><span class="stat-value">{{ runningStats.distanceKm.total | commas }}</span><span class="stat-label">km total</span></div>
+      <div class="stat"><span class="stat-value">{{ runningStats.raceCount | commas }}</span><span class="stat-label">races</span></div>
+      <div class="stat"><span class="stat-value">{{ runningStats.marathonCount | commas }}</span><span class="stat-label">marathons</span></div>
+      <div class="stat"><span class="stat-value">{{ runningStats.majorCount | commas }}</span><span class="stat-label">marathon majors</span></div>
     </div>
   </section>
 </div>

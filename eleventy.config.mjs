@@ -14,6 +14,10 @@ export default function (eleventyConfig) {
     new Date(iso).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" })
   );
 
+  eleventyConfig.addFilter("commas", (n) =>
+    new Intl.NumberFormat("en-US", { maximumFractionDigits: 1 }).format(n)
+  );
+
   eleventyConfig.addFilter("mergePbs", (staticPbs, livePbs) =>
     staticPbs.map((pb) => livePbs.find((live) => live.distance === pb.distance) ?? pb)
   );
