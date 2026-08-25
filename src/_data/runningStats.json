@@ -1,12 +1,12 @@
 {
-  "fetchedAt": "2026-08-25T10:54:11.780Z",
+  "fetchedAt": "2026-08-25T11:07:36.370Z",
   "distanceKm": {
     "thisWeek": 10.5,
     "thisMonth": 209.4,
     "thisYear": 1715,
     "total": null
   },
-  "raceCount": 84,
-  "marathonCount": 19,
+  "raceCount": 83,
+  "marathonCount": 16,
   "majorCount": 3
 }

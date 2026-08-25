@@ -83,6 +83,18 @@ function computePbs(races) {
   return pbs;
 }
 
+function dedupeRaces(races) {
+  const seen = new Set();
+  const deduped = [];
+  for (const race of races) {
+    const key = `${race.date}|${race.name}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    deduped.push(race);
+  }
+  return deduped;
+}
+
 async function main() {
   await mkdir(OUT_DIR, { recursive: true });
 
@@ -134,6 +146,8 @@ async function main() {
       races = [...cache.values()];
     }
   }
+
+  races = dedupeRaces(races);
 
   const data = { fetchedAt: new Date().toISOString(), races, pbs: computePbs(races) };
 

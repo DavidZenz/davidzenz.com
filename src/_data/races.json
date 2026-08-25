@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-25T10:53:42.679Z",
+  "fetchedAt": "2026-08-25T11:07:36.273Z",
   "races": [
     {
       "activity_id": 1063077,
@@ -275,17 +275,6 @@
       "official_time_s": 12210,
       "lat": 48.232891,
       "lon": 16.418225
-    },
-    {
-      "activity_id": 4877082,
-      "date": "2016-07-03",
-      "name": "Gold Coast Marathon",
-      "distance_km": 42.9,
-      "official_distance_km": 42.195,
-      "duration_s": 13151,
-      "official_time_s": 13151,
-      "lat": -27.966034,
-      "lon": 153.416149
     },
     {
       "activity_id": 5058523,

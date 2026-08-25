@@ -7,8 +7,8 @@ const RACES_FILE = new URL("races.json", OUT_DIR);
 const token = process.env.RUNALYZE_TOKEN;
 const headers = { token, Accept: "application/json" };
 
-const MARATHON_MIN_KM = 40;
-const MARATHON_MAX_KM = 44;
+const MARATHON_MIN_KM = 41.5;
+const MARATHON_MAX_KM = 43.2;
 const MAJOR_KEYWORDS = ["berlin", "boston", "chicago", "london", "new york", "nyc", "tokyo"];
 
 async function fetchJson(url) {
