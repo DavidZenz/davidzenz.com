@@ -12,8 +12,10 @@ permalink: /publications/
     <ul class="entry-list">
       {% for pub in publications.peerReviewed %}
       <li class="entry">
-        <div class="entry-title">{{ pub.title }}</div>
-        <div class="entry-meta">{{ pub.authors }} — {{ pub.venue }}, {{ pub.date }}</div>
+        <div class="entry-title">
+          {% if pub.url %}<a href="{{ pub.url }}" target="_blank" rel="noopener">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}
+        </div>
+        <div class="entry-meta">{{ pub.authors }} — {{ pub.venue }}{% if pub.volume %}, {{ pub.volume }}{% endif %}, {{ pub.date }}</div>
       </li>
       {% endfor %}
     </ul>
@@ -24,8 +26,10 @@ permalink: /publications/
     <ul class="entry-list">
       {% for pub in publications.monthlyReports %}
       <li class="entry">
-        <div class="entry-title">{{ pub.title }}</div>
-        <div class="entry-meta">{{ pub.venue }} — {{ pub.date }}</div>
+        <div class="entry-title">
+          {% if pub.url %}<a href="{{ pub.url }}" target="_blank" rel="noopener">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}
+        </div>
+        <div class="entry-meta">{{ pub.venue }} — {{ pub.date }}{% if pub.note %} — {{ pub.note }}{% endif %}</div>
       </li>
       {% endfor %}
     </ul>

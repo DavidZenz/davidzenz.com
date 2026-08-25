@@ -3,8 +3,8 @@
   "pbs": [
     { "distance": "5k", "time": "17:40", "note": "road" },
     { "distance": "10k", "time": "36:41", "note": "road" },
-    { "distance": "Half Marathon", "time": "1:19:53", "note": "placeholder — verify" },
-    { "distance": "Marathon", "time": "2:54:57", "note": "placeholder — verify" },
-    { "distance": "88k", "time": "TBD", "note": "ultra" }
+    { "distance": "Half Marathon", "time": "1:19:53", "note": "road - Vienna Half" },
+    { "distance": "Marathon", "time": "2:54:57", "note": "road - Berlin Marathon" },
+    { "distance": "88k", "time": "TBD", "note": "Ultra - WRU" }
   ]
 }

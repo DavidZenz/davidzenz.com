@@ -1,11 +1,11 @@
 {
-  "role": "Data Scientist and Statistician at wiiw (Vienna Institute for International Economic Studies)",
-  "bio": "Develops and maintains interactive R Shiny applications and implements automated data pipelines, focusing on integrating large-scale international trade datasets into research. Manages statistical data for Estonia, Latvia, Lithuania, and Poland. Member of the wiiw Works Council.",
+  "role": "Data Scientist / Statistician at wiiw (Vienna Institute for International Economic Studies)",
+  "bio": "Developing R Shiny applications, designing and implementing automated data pipelines, integrating large-scale international trade datasets and other Big Data sets into research. Research on trade, agent-based modeling and forecasting. Member of the wiiw Works Council.",
   "researchInterests": [
     "Time series econometrics",
     "Forecasting",
     "Agent-based macroeconomic modeling",
-    "Big data integration in economic research"
+    "Big Data integration in economic research"
   ],
   "education": [
     { "years": "Since 2016", "what": "MSc Statistics", "where": "University of Vienna" },
@@ -25,5 +25,5 @@
   "civilianService": [
     { "years": "2007–2008", "what": "Paramedic", "where": "Arbeiter-Samariter-Bund" }
   ],
-  "otherInterests": ["Espresso", "Cooking", "European football", "Bouldering", "Snowboarding", "Photography"]
+  "otherInterests": ["Good Coffee", "Cooking", "European Football", "Bouldering", "Snowboarding", "Surfing", "Photography"]
 }

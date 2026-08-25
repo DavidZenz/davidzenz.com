@@ -2,23 +2,46 @@
   "peerReviewed": [
     {
       "title": "Wrapping input-output multipliers in confidence intervals",
-      "authors": "with A.F. Amores, J.M. Rueda-Cantuche, and R. Stehrer",
-      "venue": "Journal of Economic Structures, 13(17)",
+      "authors": "with Antonio F. Amores, Jose M. Rueda-Cantuche, and Robert Stehrer",
+      "venue": "Journal of Economic Structures",
+      "volume": "13, Article 17",
       "date": "October 2024",
-      "url": null
+      "url": "https://doi.org/10.1186/s40008-024-00331-4"
     }
   ],
   "monthlyReports": [
     {
       "title": "Chart of the month: The China shock 2.0 arrives in CESEE",
-      "venue": "wiiw Monthly Report",
+      "venue": "wiiw Monthly Report No. 06/2026",
+      "note": "pp. 10–13, editor: Vasily Astrov",
       "date": "June 2026",
       "url": null
     }
   ],
   "handbooksAndReports": [
-    { "title": "wiiw Handbook of Statistics", "note": "co-authored, eight editions", "date": "2017–2020" },
-    { "title": "wiiw Statistical Reports", "note": "two reports", "date": "2020, 2024" }
+    {
+      "title": "wiiw Handbook of Statistics 2020: Central, East and Southeast Europe",
+      "note": "co-authored with Borosak, Bykova, Heger, Muck, Schwarzhappel, Vasaros; editor: Mario Holzner",
+      "date": "December 2020"
+    },
+    {
+      "title": "wiiw Handbook of Statistics 2020: Excel Tables",
+      "note": "same co-authors",
+      "date": "December 2020"
+    },
+    { "title": "wiiw Handbook of Statistics 2019", "note": "PDF and Excel editions", "date": "November 2019" },
+    { "title": "wiiw Handbook of Statistics 2018", "note": "PDF and Excel editions", "date": "November 2018" },
+    { "title": "wiiw Handbook of Statistics 2017", "note": "PDF and Excel editions", "date": "November 2017" },
+    {
+      "title": "Introducing the wiiw COMECON Dataset",
+      "note": "with Banushi, Bykova, Frei, Kochnev, Mara, Neubauer, Prasch, Ruskova, Schwarzhappel — wiiw Statistical Report No. 13",
+      "date": "November 2024"
+    },
+    {
+      "title": "Die Vernetzung Wiens mit den Städten Europas",
+      "note": "wiiw Statistical Report No. 9",
+      "date": "June 2020"
+    }
   ],
   "documents": [
     { "title": "Curriculum Vitae (PDF)", "url": null },
