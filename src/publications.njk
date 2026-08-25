@@ -35,11 +35,12 @@ permalink: /publications/
 
   <section>
     <h2>Books</h2>
+    <p class="notice">{{ publications.booksNote }}</p>
     <ul class="entry-list project-grid">
       {% for pub in publications.books %}
       <li class="entry">
         <div class="entry-title">{{ pub.title }}</div>
-        <div class="entry-meta">{{ pub.note }} — {{ pub.date }}</div>
+        <div class="entry-meta">{% if pub.note %}{{ pub.note }} — {% endif %}{{ pub.date }}</div>
       </li>
       {% endfor %}
     </ul>
