@@ -9,7 +9,7 @@
       "url": "https://doi.org/10.1186/s40008-024-00331-4"
     }
   ],
-  "monthlyReports": [
+  "shorterArticles": [
     {
       "title": "Chart of the month: The China shock 2.0 arrives in CESEE",
       "venue": "wiiw Monthly Report No. 06/2026",
@@ -18,7 +18,7 @@
       "url": null
     }
   ],
-  "handbooksAndReports": [
+  "books": [
     {
       "title": "wiiw Handbook of Statistics 2020: Central, East and Southeast Europe",
       "note": "co-authored with Borosak, Bykova, Heger, Muck, Schwarzhappel, Vasaros; editor: Mario Holzner",
@@ -31,7 +31,9 @@
     },
     { "title": "wiiw Handbook of Statistics 2019", "note": "PDF and Excel editions", "date": "November 2019" },
     { "title": "wiiw Handbook of Statistics 2018", "note": "PDF and Excel editions", "date": "November 2018" },
-    { "title": "wiiw Handbook of Statistics 2017", "note": "PDF and Excel editions", "date": "November 2017" },
+    { "title": "wiiw Handbook of Statistics 2017", "note": "PDF and Excel editions", "date": "November 2017" }
+  ],
+  "workingPapers": [
     {
       "title": "Introducing the wiiw COMECON Dataset",
       "note": "with Banushi, Bykova, Frei, Kochnev, Mara, Neubauer, Prasch, Ruskova, Schwarzhappel — wiiw Statistical Report No. 13",
@@ -41,6 +43,15 @@
       "title": "Die Vernetzung Wiens mit den Städten Europas",
       "note": "wiiw Statistical Report No. 9",
       "date": "June 2020"
+    }
+  ],
+  "pressMentions": [
+    {
+      "title": "China kapert das Industriegeschäft der Europäer",
+      "note": "by Aloysius Widmann, quoted; also in print",
+      "venue": "Die Presse",
+      "date": "4 August 2026",
+      "url": "https://www.diepresse.com/40255799/china-kapert-das-industriegeschaeft-der-europaeer"
     }
   ],
   "documents": [

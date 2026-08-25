@@ -22,9 +22,33 @@ permalink: /publications/
   </section>
 
   <section>
-    <h2>wiiw Monthly Reports</h2>
+    <h2>Working papers</h2>
+    <ul class="entry-list project-grid">
+      {% for pub in publications.workingPapers %}
+      <li class="entry">
+        <div class="entry-title">{{ pub.title }}</div>
+        <div class="entry-meta">{{ pub.note }} — {{ pub.date }}</div>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h2>Books</h2>
+    <ul class="entry-list project-grid">
+      {% for pub in publications.books %}
+      <li class="entry">
+        <div class="entry-title">{{ pub.title }}</div>
+        <div class="entry-meta">{{ pub.note }} — {{ pub.date }}</div>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h2>Shorter articles and comments</h2>
     <ul class="entry-list">
-      {% for pub in publications.monthlyReports %}
+      {% for pub in publications.shorterArticles %}
       <li class="entry">
         <div class="entry-title">
           {% if pub.url %}<a href="{{ pub.url }}" target="_blank" rel="noopener">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}
@@ -36,12 +60,14 @@ permalink: /publications/
   </section>
 
   <section>
-    <h2>Handbooks &amp; statistical reports</h2>
+    <h2>In the press</h2>
     <ul class="entry-list">
-      {% for pub in publications.handbooksAndReports %}
+      {% for pub in publications.pressMentions %}
       <li class="entry">
-        <div class="entry-title">{{ pub.title }}</div>
-        <div class="entry-meta">{{ pub.note }} — {{ pub.date }}</div>
+        <div class="entry-title">
+          {% if pub.url %}<a href="{{ pub.url }}" target="_blank" rel="noopener">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}
+        </div>
+        <div class="entry-meta">{{ pub.venue }} — {{ pub.date }}{% if pub.note %} — {{ pub.note }}{% endif %}</div>
       </li>
       {% endfor %}
     </ul>
@@ -50,7 +76,7 @@ permalink: /publications/
   <section>
     <h2>Documents</h2>
     <p class="notice">{{ publications._comment }}</p>
-    <ul class="entry-list">
+    <ul class="entry-list project-grid">
       {% for doc in publications.documents %}
       <li class="entry"><div class="entry-title">{{ doc.title }}</div></li>
       {% endfor %}
