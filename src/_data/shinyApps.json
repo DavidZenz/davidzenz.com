@@ -1,0 +1,27 @@
+[
+  {
+    "title": "CESEE Visual Data Explorer",
+    "infoUrl": "https://wiiw.ac.at/cesee-visual-data-explorer.html",
+    "appUrl": "https://data.wiiw.ac.at/vde.html"
+  },
+  {
+    "title": "SEEJobsGateway",
+    "infoUrl": "https://wiiw.ac.at/seejobsgateway.html",
+    "appUrl": "http://data.wiiw.ac.at/seejobsgateway-q.html"
+  },
+  {
+    "title": "wiiw COMECON Dataset",
+    "infoUrl": "https://comecon.wiiw.ac.at/",
+    "appUrl": "https://comecon.wiiw.ac.at/query-data/"
+  },
+  {
+    "title": "EU KLEMS & INTANProd",
+    "infoUrl": "https://euklems.eu/",
+    "appUrl": "https://euklems.eu/query/"
+  },
+  {
+    "title": "Danube Region Monitor",
+    "infoUrl": "https://peopleandskills.danube-region.eu/danube-region-monitor/",
+    "appUrl": "https://peopleandskills.danube-region.eu/danube-region-monitor/"
+  }
+]

@@ -29,6 +29,35 @@ hero: true
   {% endif %}
 
   <section>
+    <h2>Shiny apps</h2>
+    <ul class="entry-list">
+      {% for app in shinyApps %}
+      <li class="entry">
+        <div class="entry-title"><a class="link-underline" href="{{ app.infoUrl }}" target="_blank" rel="noopener">{{ app.title }}</a></div>
+        {% if app.appUrl != app.infoUrl %}
+        <div class="entry-meta"><a class="link-underline" href="{{ app.appUrl }}" target="_blank" rel="noopener">Open app</a></div>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h2>R packages</h2>
+    <ul class="entry-list">
+      {% for pkg in rPackages %}
+      <li class="entry">
+        <div class="entry-title"><a class="link-underline" href="{{ pkg.url }}" target="_blank" rel="noopener">{{ pkg.title }}</a></div>
+        <div class="entry-meta">
+          {{ pkg.description }}
+          {% if pkg.url != pkg.githubUrl %}<br><a class="link-underline" href="{{ pkg.githubUrl }}" target="_blank" rel="noopener">GitHub</a>{% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
     <h2>Recently pushed</h2>
     <ul class="entry-list">
       {% for repo in github.repos %}

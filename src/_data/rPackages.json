@@ -1,0 +1,50 @@
+[
+  {
+    "title": "sube",
+    "description": "Supply-use based econometric workflow tools — building domestic matrices, Leontief-style SUBE multipliers, and elasticity regressions for reproducible input-output analysis.",
+    "url": "https://davidzenz.github.io/sube/",
+    "githubUrl": "https://github.com/davidzenz/sube"
+  },
+  {
+    "title": "gg2d3",
+    "description": "Renders ggplot2 objects with D3 via htmlwidgets.",
+    "url": "https://davidzenz.github.io/gg2d3/",
+    "githubUrl": "https://github.com/DavidZenz/gg2d3"
+  },
+  {
+    "title": "bsvarPost",
+    "description": "Post-estimation tools for Bayesian structural vector autoregressions fitted with 'bsvars' and 'bsvarSIGNs' — impulse responses, dynamic multipliers, decompositions, and model comparison.",
+    "url": "https://github.com/DavidZenz/bsvarPost",
+    "githubUrl": "https://github.com/DavidZenz/bsvarPost"
+  },
+  {
+    "title": "typstR",
+    "description": "Publication-ready scientific documents with Quarto and Typst — manuscript scaffolding and reusable templates for working papers, articles, and policy briefs.",
+    "url": "https://davidzenz.github.io/typstR/",
+    "githubUrl": "https://github.com/DavidZenz/typstR"
+  },
+  {
+    "title": "vizRd",
+    "description": "Data-agnostic instant dashboards — launch a Shiny dashboard from a project folder without editing code.",
+    "url": "https://davidzenz.github.io/vizRd/",
+    "githubUrl": "https://github.com/DavidZenz/vizRd"
+  },
+  {
+    "title": "esrnn",
+    "description": "A 'torch' implementation of the ES-RNN hybrid model (winning entry of the M4 Forecasting Competition) for short-horizon time series forecasting and nowcasting.",
+    "url": "https://github.com/DavidZenz/esrnn",
+    "githubUrl": "https://github.com/DavidZenz/esrnn"
+  },
+  {
+    "title": "wiiwcast",
+    "description": "High-frequency nowcasting of monthly CESEE foreign trade, reading from a partitioned parquet mirror of the Haver Analytics DLX database via DuckDB.",
+    "url": "https://github.com/DavidZenz/wiiwcast",
+    "githubUrl": "https://github.com/DavidZenz/wiiwcast"
+  },
+  {
+    "title": "fidelio",
+    "description": "R-first reconstruction of the FIDELIO multi-country input-output model, with FIGARO-shaped inputs and transparent matrix assembly.",
+    "url": "https://github.com/DavidZenz/fidelio",
+    "githubUrl": "https://github.com/DavidZenz/fidelio"
+  }
+]
