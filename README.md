@@ -25,7 +25,6 @@ Pages themselves are the `.njk` files directly under `src/`.
 ## Deferred / TODO
 
 - **Imprint** (`src/imprint.njk`) — fill in legal name/address before going live (Austrian legal requirement).
-- **Strava integration** — register a Strava API app, do a one-time OAuth authorization to get a refresh token, add it as a GitHub Actions secret, then add a `scripts/fetch-strava.mjs` following the same pattern as `fetch-github.mjs`. Wire its output into `src/running.njk`.
 - **Social links** in `site.json` (LinkedIn, Instagram, Strava) — currently `null`, GitHub is verified.
 - **DNS cutover** — once ready to go live, point `davidzenz.com` DNS at GitHub Pages (A records to GitHub's IPs, or CNAME for a `www` subdomain) at your DNS provider. The `CNAME` file in this repo is already set to `davidzenz.com`.
 - Repo needs to be **public** on GitHub for the free-tier custom domain on GitHub Pages to work.

@@ -14,7 +14,7 @@ hero: true
   </div>
   <div class="hero-content">
     <span class="eyebrow">Running</span>
-    <h1>My running journey</h1>
+    <h1>Running Journey</h1>
     <p class="lede">Ultra, Marathon, Half, 10k, 5k.</p>
   </div>
 </section>
@@ -23,6 +23,7 @@ hero: true
   {% if not races.pbs.length %}<p class="notice">{{ running._comment }}</p>{% endif %}
 
   <section>
+    <h2>Personal Bests</h2>
     <table>
       <thead><tr><th>Distance</th><th>Time</th><th>Note</th></tr></thead>
       <tbody>
@@ -34,12 +35,21 @@ hero: true
   </section>
 
   <section>
-    <h2>Recent activity</h2>
+    <h2>Stats</h2>
+    {% if not runningStats.fetchedAt %}
     <p class="notice">
-      Live Strava data isn't wired in yet — it needs a one-time API app + OAuth setup on your end.
-      Once you've got a client id/secret and refresh token, this section will pull recent runs
-      and weekly mileage at build time, the same way the <a class="link-underline" href="/code/">Code</a> page pulls GitHub activity.
+      Live Runalyze data isn't wired in yet — set a <code>RUNALYZE_TOKEN</code> to pull it at build time.
     </p>
+    {% endif %}
+    <div class="stat-row">
+      <div class="stat"><span class="stat-value">{{ runningStats.distanceKm.thisWeek }}</span><span class="stat-label">km this week</span></div>
+      <div class="stat"><span class="stat-value">{{ runningStats.distanceKm.thisMonth }}</span><span class="stat-label">km this month</span></div>
+      <div class="stat"><span class="stat-value">{{ runningStats.distanceKm.thisYear }}</span><span class="stat-label">km this year</span></div>
+      <div class="stat"><span class="stat-value">{{ runningStats.distanceKm.total }}</span><span class="stat-label">km total</span></div>
+      <div class="stat"><span class="stat-value">{{ runningStats.raceCount }}</span><span class="stat-label">races</span></div>
+      <div class="stat"><span class="stat-value">{{ runningStats.marathonCount }}</span><span class="stat-label">marathons</span></div>
+      <div class="stat"><span class="stat-value">{{ runningStats.majorCount }}</span><span class="stat-label">marathon majors</span></div>
+    </div>
   </section>
 </div>
 
