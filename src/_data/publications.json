@@ -22,12 +22,24 @@
   "books": [
     {
       "title": "wiiw Handbook of Statistics 2020",
-      "note": "co-authored with Borosak, Bykova, Heger, Muck, Schwarzhappel, Vasaros; editor: Mario Holzner",
+      "note": "with Beata Borosak, Alexandra Bykova, Nadya Heger, Beate Muck, Monika Schwarzhappel, Galina Vasaros; editor: Mario Holzner",
       "date": "December 2020"
     },
-    { "title": "wiiw Handbook of Statistics 2019", "date": "November 2019" },
-    { "title": "wiiw Handbook of Statistics 2018", "date": "November 2018" },
-    { "title": "wiiw Handbook of Statistics 2017", "date": "November 2017" }
+    {
+      "title": "wiiw Handbook of Statistics 2019",
+      "note": "with Beata Borosak, Alexandra Bykova, Nadya Heger, Beate Muck, Monika Schwarzhappel, Galina Vasaros; editor: Mario Holzner",
+      "date": "November 2019"
+    },
+    {
+      "title": "wiiw Handbook of Statistics 2018",
+      "note": "with Alexandra Bykova, Nadya Heger, Beate Muck, Renate Prasch, Monika Schwarzhappel, Galina Vasaros; editor: Mario Holzner",
+      "date": "November 2018"
+    },
+    {
+      "title": "wiiw Handbook of Statistics 2017",
+      "note": "with Alexandra Bykova, Nadya Heger, Beate Muck, Renate Prasch, Monika Schwarzhappel, Galina Vasaros; editor: Mario Holzner",
+      "date": "November 2017"
+    }
   ],
   "workingPapers": [
     {
