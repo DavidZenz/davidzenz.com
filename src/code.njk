@@ -30,13 +30,14 @@ hero: true
 
   <section>
     <h2>Shiny apps</h2>
-    <ul class="entry-list">
+    <ul class="entry-list project-grid project-grid-2col">
       {% for app in shinyApps %}
       <li class="entry">
         <div class="entry-title"><a class="link-underline" href="{{ app.infoUrl }}" target="_blank" rel="noopener">{{ app.title }}</a></div>
-        {% if app.appUrl != app.infoUrl %}
-        <div class="entry-meta"><a class="link-underline" href="{{ app.appUrl }}" target="_blank" rel="noopener">Open app</a></div>
-        {% endif %}
+        <div class="entry-meta">
+          {{ app.description }}
+          {% if app.appUrl != app.infoUrl %}<br><a class="link-underline" href="{{ app.appUrl }}" target="_blank" rel="noopener">Open app</a>{% endif %}
+        </div>
       </li>
       {% endfor %}
     </ul>
@@ -44,7 +45,7 @@ hero: true
 
   <section>
     <h2>R packages</h2>
-    <ul class="entry-list">
+    <ul class="entry-list project-grid project-grid-2col">
       {% for pkg in rPackages %}
       <li class="entry">
         <div class="entry-title"><a class="link-underline" href="{{ pkg.url }}" target="_blank" rel="noopener">{{ pkg.title }}</a></div>

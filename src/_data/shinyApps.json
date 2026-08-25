@@ -1,26 +1,31 @@
 [
   {
     "title": "CESEE Visual Data Explorer",
+    "description": "Interactive charting tool for economic data across 23 Central, East and Southeast European countries.",
     "infoUrl": "https://wiiw.ac.at/cesee-visual-data-explorer.html",
     "appUrl": "https://data.wiiw.ac.at/vde.html"
   },
   {
     "title": "SEEJobsGateway",
+    "description": "Harmonized labour market indicators for the six Western Balkan countries and four EU peers.",
     "infoUrl": "https://wiiw.ac.at/seejobsgateway.html",
     "appUrl": "http://data.wiiw.ac.at/seejobsgateway-q.html"
   },
   {
     "title": "wiiw COMECON Dataset",
+    "description": "Historical economic time series (1944–1993) for the command economies of Eastern Europe.",
     "infoUrl": "https://comecon.wiiw.ac.at/",
     "appUrl": "https://comecon.wiiw.ac.at/query-data/"
   },
   {
     "title": "EU KLEMS & INTANProd",
+    "description": "Growth and productivity data at the industry level for all EU member states, based on Eurostat data.",
     "infoUrl": "https://euklems.eu/",
     "appUrl": "https://euklems.eu/query/"
   },
   {
     "title": "Danube Region Monitor",
+    "description": "Labour mobility and skills indicators for the Danube region, part of the EU Strategy for the Danube Region.",
     "infoUrl": "https://peopleandskills.danube-region.eu/danube-region-monitor/",
     "appUrl": "https://peopleandskills.danube-region.eu/danube-region-monitor/"
   }
