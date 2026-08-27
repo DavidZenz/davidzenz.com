@@ -76,10 +76,13 @@ permalink: /publications/
 
   <section>
     <h2>Documents</h2>
-    <p class="notice">{{ publications._comment }}</p>
     <ul class="entry-list project-grid">
       {% for doc in publications.documents %}
-      <li class="entry"><div class="entry-title">{{ doc.title }}</div></li>
+      <li class="entry">
+        <div class="entry-title">
+          {% if doc.url %}<a href="{{ doc.url }}" target="_blank" rel="noopener">{{ doc.title }}</a>{% else %}{{ doc.title }}{% endif %}
+        </div>
+      </li>
       {% endfor %}
     </ul>
   </section>

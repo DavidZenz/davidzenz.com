@@ -64,8 +64,7 @@
   ],
   "documents": [
     { "title": "Curriculum Vitae (PDF)", "url": null },
-    { "title": "List of Publications (PDF)", "url": null },
-    { "title": "List of Projects (PDF)", "url": null }
-  ],
-  "_comment": "PDFs linked from the wiiw profile page — fetch and host locally, or link out to wiiw.ac.at, once you confirm which."
+    { "title": "List of Publications (PDF)", "url": "https://wiiw.ac.at/files/staff/list-of-publications/list-of-publications-david-zenz-s-1199.pdf" },
+    { "title": "List of Projects (PDF)", "url": "https://wiiw.ac.at/files/staff/list-of-projects/list-of-projects-david-zenz-s-1199.pdf" }
+  ]
 }
