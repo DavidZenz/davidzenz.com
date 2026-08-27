@@ -1,0 +1,36 @@
+name: Refresh project topics
+
+on:
+  schedule:
+    - cron: "0 3 1 * *"   # 03:00 UTC on the 1st of every month (before the 04:17 daily deploy)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: project-topics
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run fetch:project-topics
+      - name: Commit refreshed topics
+        run: |
+          if ! git diff --quiet -- src/_data/projectTopics.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add src/_data/projectTopics.json
+            git commit -m "chore: refresh project topics from wiiw"
+            git push
+          else
+            echo "No change in project topics."
+          fi

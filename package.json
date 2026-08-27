@@ -8,6 +8,7 @@
     "fetch:gigs": "node scripts/fetch-gigs.mjs",
     "fetch:races": "node scripts/fetch-races.mjs",
     "fetch:running-stats": "node scripts/fetch-running-stats.mjs",
+    "fetch:project-topics": "node scripts/fetch-project-topics.mjs",
     "build:images": "node scripts/build-images.mjs",
     "build": "npm run fetch:github && npm run fetch:gigs && npm run fetch:races && npm run fetch:running-stats && npm run build:images && eleventy",
     "start": "npm run fetch:github && npm run fetch:gigs && npm run fetch:races && npm run fetch:running-stats && npm run build:images && eleventy --serve",
@@ -15,7 +16,8 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "sharp": "^0.35.3"
+    "sharp": "^0.35.3",
+    "unpdf": "^1.8.1"
   },
   "dependencies": {
     "leaflet": "^1.9.4",

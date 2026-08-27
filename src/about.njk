@@ -30,6 +30,14 @@ hero: true
   </section>
 
   <section>
+    <h2>Project topics</h2>
+    <p class="topics-note">{{ projectTopics.note }}</p>
+    <ul class="tags tags--weighted">
+      {% for item in projectTopics.topics %}<li class="tw-{{ item.weight }}">{{ item.label }}</li>{% endfor %}
+    </ul>
+  </section>
+
+  <section>
     <h2>Experience</h2>
     <ul class="timeline">
       {% for item in professional.experience %}

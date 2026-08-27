@@ -1,0 +1,98 @@
+{
+  "note": "Recurring themes across 40 wiiw research projects (2005–2028), ordered by how often they appear.",
+  "source": "https://wiiw.ac.at/files/staff/list-of-projects/list-of-projects-david-zenz-s-1199.pdf",
+  "fetchedAt": "2026-08-27T07:45:15.374Z",
+  "projectCount": 40,
+  "topics": [
+    {
+      "label": "International trade",
+      "count": 14,
+      "weight": 3
+    },
+    {
+      "label": "Macroeconomic forecasting & scenarios",
+      "count": 14,
+      "weight": 3
+    },
+    {
+      "label": "Western Balkans & EU enlargement",
+      "count": 13,
+      "weight": 3
+    },
+    {
+      "label": "CESEE & transition economies",
+      "count": 12,
+      "weight": 3
+    },
+    {
+      "label": "Global value chains",
+      "count": 12,
+      "weight": 3
+    },
+    {
+      "label": "Labour markets",
+      "count": 11,
+      "weight": 3
+    },
+    {
+      "label": "Econometric modelling",
+      "count": 10,
+      "weight": 3
+    },
+    {
+      "label": "Productivity & growth accounting",
+      "count": 10,
+      "weight": 3
+    },
+    {
+      "label": "Demographic change & skills",
+      "count": 8,
+      "weight": 2
+    },
+    {
+      "label": "Green transition & climate policy",
+      "count": 8,
+      "weight": 2
+    },
+    {
+      "label": "Trade policy & non-tariff measures",
+      "count": 8,
+      "weight": 2
+    },
+    {
+      "label": "Competitiveness",
+      "count": 7,
+      "weight": 2
+    },
+    {
+      "label": "EU cohesion policy & budget",
+      "count": 7,
+      "weight": 2
+    },
+    {
+      "label": "Foreign direct investment",
+      "count": 6,
+      "weight": 1
+    },
+    {
+      "label": "Input–output analysis",
+      "count": 6,
+      "weight": 1
+    },
+    {
+      "label": "Interactive dashboards & data tools",
+      "count": 6,
+      "weight": 1
+    },
+    {
+      "label": "Urban & regional economics",
+      "count": 6,
+      "weight": 1
+    },
+    {
+      "label": "Digitalisation & ICT",
+      "count": 5,
+      "weight": 1
+    }
+  ]
+}

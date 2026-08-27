@@ -1,0 +1,79 @@
+{
+  "//": "Keyword classifier for scripts/fetch-project-topics.mjs. Each project in the wiiw List of Projects PDF is scored once per topic if ANY of its patterns match (case-insensitive regex against the project's text block). Topics are then ranked by how many projects they appear in. Edit patterns / thresholds here; the script is generic.",
+  "source": "https://wiiw.ac.at/files/staff/list-of-projects/list-of-projects-david-zenz-s-1199.pdf",
+  "minCount": 2,
+  "topics": [
+    {
+      "label": "International trade",
+      "patterns": ["\\btrade\\b", "trade flows?", "free trade", "\\bFTA\\b", "gravity model", "\\bexports?\\b", "\\bimports?\\b", "tariffs?"]
+    },
+    {
+      "label": "Global value chains",
+      "patterns": ["value chains?", "global value chain", "\\bGVCs?\\b", "supply chains?", "functional specialisation", "smile curve", "production networks?", "division of labour"]
+    },
+    {
+      "label": "Labour markets",
+      "patterns": ["labou?r markets?", "employment", "\\bwages?\\b", "occupations?", "\\bjobs?\\b", "unemployment", "labou?r force", "workforce", "working conditions"]
+    },
+    {
+      "label": "Macroeconomic forecasting & scenarios",
+      "patterns": ["forecasts?", "forecasting", "\\bscenarios?\\b", "macroeconomic indicators?", "projections?", "macro scenario"]
+    },
+    {
+      "label": "Econometric modelling",
+      "patterns": ["econometric", "gravity model", "panel data", "panel regression", "meta-analysis", "meta-regression", "network analysis", "counterfactual", "\\bregression\\b", "time series", "quantitative analysis"]
+    },
+    {
+      "label": "CESEE & transition economies",
+      "patterns": ["CESEE", "Central, East", "transition econom", "command econom", "Eurasian", "\\bCIS\\b", "South-?[Ee]ast(ern)? Europe", "COMECON", "COMECON Dataset"]
+    },
+    {
+      "label": "Western Balkans & EU enlargement",
+      "patterns": ["Western Balkan", "enlargement", "EU accession", "candidate countr", "\\bconvergence\\b", "accession pathway"]
+    },
+    {
+      "label": "Foreign direct investment",
+      "patterns": ["foreign direct investment", "\\bFDI\\b", "greenfield", "multinational"]
+    },
+    {
+      "label": "Productivity & growth accounting",
+      "patterns": ["productivity", "growth accounting", "\\bEU ?KLEMS\\b", "total factor productivity", "multi-?factor productivity", "\\bTFP\\b", "capital stock", "intangible assets?"]
+    },
+    {
+      "label": "Competitiveness",
+      "patterns": ["competitiveness", "competitive position", "competitive growth"]
+    },
+    {
+      "label": "Interactive dashboards & data tools",
+      "patterns": ["dashboard", "online database", "online monitor", "data explorer", "web-?based", "user-?friendly", "interactive tool", "database and (an )?online"]
+    },
+    {
+      "label": "Input–output analysis",
+      "patterns": ["input-?output", "input–output", "supply and use", "supply-?use", "\\bFIGARO\\b", "multipliers?", "national account"]
+    },
+    {
+      "label": "Green transition & climate policy",
+      "patterns": ["climate", "\\bcarbon\\b", "green technolog", "eco-?innovation", "emissions?", "\\bGHGs?\\b", "decarbonisation", "environmental regulation", "sustainab"]
+    },
+    {
+      "label": "Trade policy & non-tariff measures",
+      "patterns": ["non-?tariff", "\\bNTMs?\\b", "\\bTBT\\b", "\\bSPS\\b", "safeguard", "trade defen[cs]e", "protectionism", "trade policy"]
+    },
+    {
+      "label": "EU cohesion policy & budget",
+      "patterns": ["cohesion policy", "\\bCohesion\\b", "EU budget", "budgetary balance", "structural funds", "own resources", "EU funds"]
+    },
+    {
+      "label": "Digitalisation & ICT",
+      "patterns": ["\\bICT\\b", "digitalisation", "digitisation", "digital sector", "digital transformation", "technological transformation"]
+    },
+    {
+      "label": "Demographic change & skills",
+      "patterns": ["demographic", "\\bskills?\\b", "\\beducation\\b", "ageing", "\\bmigration\\b", "training"]
+    },
+    {
+      "label": "Urban & regional economics",
+      "patterns": ["\\burban\\b", "\\bcities\\b", "city of", "regional development", "Städtebund", "regional cohesion", "regional level", "smart specialisation"]
+    }
+  ]
+}
