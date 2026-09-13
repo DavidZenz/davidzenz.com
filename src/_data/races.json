@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-12T08:40:07.502Z",
+  "fetchedAt": "2026-09-13T09:35:46.214Z",
   "races": [
     {
       "activity_id": 1063077,
@@ -924,6 +924,17 @@
       "official_time_s": 1172,
       "lat": 55.979062,
       "lon": -3.292803
+    },
+    {
+      "activity_id": 207363623,
+      "date": "2026-09-12",
+      "name": "Seestadt Lauf 2026",
+      "distance_km": 10,
+      "official_distance_km": 10,
+      "duration_s": 2341,
+      "official_time_s": 10,
+      "lat": 48.22368,
+      "lon": 16.50324
     }
   ],
   "pbs": [
@@ -934,7 +945,7 @@
     },
     {
       "distance": "10k",
-      "time": "36:41",
+      "time": "0:10",
       "note": "race"
     },
     {
