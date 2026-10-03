@@ -11,11 +11,18 @@
   ],
   "shorterArticles": [
     {
+      "title": "EU growth remains weak and is increasingly labour-driven",
+      "venue": "wiiw Opinion Piece, Vienna",
+      "note": "with Robert Stehrer",
+      "date": "October 2026",
+      "url": "https://wiiw.ac.at/eu-growth-remains-weak-and-is-increasingly-labour-driven-n-742.html"
+    },
+    {
       "title": "Chart of the month: The China shock 2.0 arrives in CESEE",
       "venue": "wiiw Monthly Report No. 06/2026",
       "note": "pp. 10–13, editor: Vasily Astrov",
       "date": "June 2026",
-      "url": null
+      "url": "https://wiiw.ac.at/monthly-report-no-06-2026-p-7642.html"
     }
   ],
   "booksNote": "wiiw Handbook of Statistics: Central, East and Southeast Europe — printed, and available as PDF and Excel tables.",
@@ -44,7 +51,7 @@
   "workingPapers": [
     {
       "title": "Introducing the wiiw COMECON Dataset",
-      "note": "with Banushi, Bykova, Frei, Kochnev, Mara, Neubauer, Prasch, Ruskova, Schwarzhappel — wiiw Statistical Report No. 13",
+      "note": "with Xhesika Banushi, Alexandra Bykova, Magdalena Frei, Artem Kochnev, Isilda Mara, Manuel Neubauer, Renate Prasch, Hana Ruskova, and Monika Schwarzhappel — wiiw Statistical Report No. 13",
       "date": "November 2024"
     },
     {
@@ -63,8 +70,17 @@
     }
   ],
   "documents": [
-    { "title": "Curriculum Vitae (PDF)", "url": null },
-    { "title": "List of Publications (PDF)", "url": "https://wiiw.ac.at/files/staff/list-of-publications/list-of-publications-david-zenz-s-1199.pdf" },
-    { "title": "List of Projects (PDF)", "url": "https://wiiw.ac.at/files/staff/list-of-projects/list-of-projects-david-zenz-s-1199.pdf" }
+    {
+      "title": "Curriculum Vitae (PDF)",
+      "url": null
+    },
+    {
+      "title": "List of Publications (PDF)",
+      "url": "https://wiiw.ac.at/files/staff/list-of-publications/list-of-publications-david-zenz-s-1199.pdf"
+    },
+    {
+      "title": "List of Projects (PDF)",
+      "url": "https://wiiw.ac.at/files/staff/list-of-projects/list-of-projects-david-zenz-s-1199.pdf"
+    }
   ]
 }
