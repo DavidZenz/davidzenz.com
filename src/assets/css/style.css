@@ -496,3 +496,8 @@ td { font-family: var(--serif); font-size: 1.05rem; }
 .footer-social a:hover { color: var(--fg); }
 .footer-meta { display: flex; gap: 1.25rem; align-items: center; }
 .footer-meta a:hover { color: var(--fg); }
+
+/* Podcast page — logo beside the project website link */
+.podcast-site { display: flex; align-items: center; gap: 1rem; }
+.podcast-logo { flex: none; display: block; line-height: 0; }
+.podcast-logo img { width: 72px; height: 72px; border-radius: 12px; display: block; }
