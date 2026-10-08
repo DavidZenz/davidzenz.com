@@ -36,6 +36,7 @@ body[data-theme="professional"] {
 body[data-theme="professional"] .hero { background: transparent; }
 body[data-theme="music"] { --hero-bg: #0a0a0a; --hero-fg: #f5f2ec; --accent: #ff3b30; }
 body[data-theme="running"] { --hero-bg: #fdeee1; --hero-fg: #1c1b19; --accent: #ff6a2b; }
+body[data-theme="podcast"] { --hero-bg: #0d0b09; --hero-fg: #f5f2ec; --accent: #e0a458; }
 body[data-theme="code"] { --hero-bg: #0d0d10; --hero-fg: #f5f2ec; --accent: #ffb454; }
 
 @media (prefers-color-scheme: dark) {

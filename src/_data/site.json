@@ -16,6 +16,7 @@
     { "text": "Publications", "url": "/publications/" },
     { "text": "Music", "url": "/music/" },
     { "text": "Running", "url": "/running/" },
-    { "text": "Code", "url": "/code/" }
+    { "text": "Code", "url": "/code/" },
+    { "text": "Podcast", "url": "/podcast/" }
   ]
 }
