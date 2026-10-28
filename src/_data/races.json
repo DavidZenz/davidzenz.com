@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-28T19:07:40.906Z",
+  "fetchedAt": "2026-10-28T19:13:25.177Z",
   "races": [
     {
       "activity_id": 1063077,
@@ -701,7 +701,7 @@
       "distance_km": 0.39,
       "official_distance_km": null,
       "duration_s": 99,
-      "official_time_s": 53,
+      "official_time_s": null,
       "lat": 48.201874,
       "lon": 16.421165
     },
@@ -932,7 +932,7 @@
       "distance_km": 10,
       "official_distance_km": 10,
       "duration_s": 2341,
-      "official_time_s": 10,
+      "official_time_s": null,
       "lat": 48.22368,
       "lon": 16.50324
     }
@@ -945,7 +945,7 @@
     },
     {
       "distance": "10k",
-      "time": "0:10",
+      "time": "36:41",
       "note": "race"
     },
     {

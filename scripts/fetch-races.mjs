@@ -81,6 +81,16 @@ function formatTime(seconds) {
   return h > 0 ? `${h}:${pad(m)}:${pad(s)}` : `${m}:${pad(s)}`;
 }
 
+// Faster than 2:30/km is beyond world-record pace — the "official time"
+// is really something else (e.g. the official distance in km leaking
+// through the raceresult schema bug). Fall back to the recorded duration.
+function plausibleOfficialTime(race) {
+  const t = race.official_time_s;
+  const km = race.official_distance_km ?? race.distance_km;
+  if (!t || !km) return t ?? null;
+  return t / km < 150 ? null : t;
+}
+
 function bestTime(race) {
   return race.official_time_s ?? race.duration_s;
 }
@@ -162,7 +172,9 @@ async function main() {
     }
   }
 
-  races = races.map((r) => ({ ...r, official_distance_km: officialDistanceFor(r.distance_km, r.name) }));
+  races = races
+    .map((r) => ({ ...r, official_distance_km: officialDistanceFor(r.distance_km, r.name) }))
+    .map((r) => ({ ...r, official_time_s: plausibleOfficialTime(r) }));
   races = dedupeRaces(races);
 
   const data = { fetchedAt: new Date().toISOString(), races, pbs: computePbs(races) };
