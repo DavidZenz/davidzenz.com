@@ -88,6 +88,35 @@ hero: true
 
 <div class="wrap">
   <section>
+    <h2>Releases</h2>
+    {% set releaseGroups = [["Album", "Albums"], ["EP", "EPs"], ['7" Single', '7" Singles'], ["Single", "Digital singles"], ["Compilation", "Compilations"]] %}
+    {% for group in releaseGroups %}
+    <h3 class="release-group">{{ group[1] }}</h3>
+    <ul class="release-grid">
+      {% for r in music.releases %}{% if r.type == group[0] %}
+      <li class="release">
+        {% if r.url %}<a class="release-cover" href="{{ r.url }}" tabindex="-1" aria-hidden="true">{% else %}<div class="release-cover">{% endif %}
+          {% if r.cover %}
+          <picture>
+            <source type="image/avif" srcset="/assets/images/covers/{{ r.cover }}.avif">
+            <img src="/assets/images/covers/{{ r.cover }}.jpg" alt="" width="480" height="480" loading="lazy">
+          </picture>
+          {% else %}
+          <span class="release-cover-blank">{{ r.title }}</span>
+          {% endif %}
+        {% if r.url %}</a>{% else %}</div>{% endif %}
+        <div class="release-title" lang="de">{% if r.url %}<a class="link-underline" href="{{ r.url }}">{{ r.title }}</a>{% else %}{{ r.title }}{% endif %}</div>
+        <div class="release-meta">{{ r.artist }}{% if r.year %} &middot; {{ r.year }}{% endif %}</div>
+        {% if r.role %}<div class="release-meta">{{ r.role }}</div>{% endif %}
+        {% if r.note %}<div class="release-meta">{{ r.note }}</div>{% endif %}
+        {% include "release-links.njk" %}
+      </li>
+      {% endif %}{% endfor %}
+    </ul>
+    {% endfor %}
+  </section>
+
+  <section>
     <h2>Past projects</h2>
     <ul class="entry-list">
       {% for p in music.pastProjects %}
