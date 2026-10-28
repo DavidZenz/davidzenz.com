@@ -86,8 +86,8 @@ hero: true
   </div>
 </section>
 
-<div class="wrap">
-  <section>
+<section class="release-band">
+  <div class="wrap--wide">
     <h2>Releases</h2>
     {% set releaseGroups = [["Album", "Albums"], ["EP", "EPs"], ['7" Single', '7" Singles'], ["Single", "Digital singles"], ["Compilation", "Compilations"]] %}
     {% for group in releaseGroups %}
@@ -114,8 +114,10 @@ hero: true
       {% endif %}{% endfor %}
     </ul>
     {% endfor %}
-  </section>
+  </div>
+</section>
 
+<div class="wrap">
   <section>
     <h2>Past projects</h2>
     <ul class="entry-list">
