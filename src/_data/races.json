@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-28T19:14:06.264Z",
+  "fetchedAt": "2026-10-29T10:55:38.076Z",
   "races": [
     {
       "activity_id": 1063077,
@@ -187,6 +187,17 @@
       "official_time_s": 13134,
       "lat": 59.346393,
       "lon": 18.084596
+    },
+    {
+      "activity_id": 2970756,
+      "date": "2017-10-15",
+      "name": "Rock 'n' Roll Lisbon Marathon",
+      "distance_km": 42.38,
+      "official_distance_km": 42.195,
+      "duration_s": 13016,
+      "official_time_s": null,
+      "lat": 38.694542,
+      "lon": -9.424333
     },
     {
       "activity_id": 4209489,
