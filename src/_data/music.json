@@ -30,6 +30,17 @@
     { "name": "Wiener Walzertraum", "years": "2007", "role": "Drums & Percussion" },
     { "name": "Akkordeon- und Mandolinenensemble, sowie -orchester / MV Tuma", "years": null, "role": "Accordion, Upright Bass, Drums & Percussion" }
   ],
+  "awards": [
+    { "title": "ROCK ANTENNE Österreich Hall of Fame", "icon": "award", "logo": "rock-antenne-hall-of-fame-logo", "artist": "Metternich", "year": 2026, "detail": "Inducted in the category Band National", "url": "/assets/images/awards/rock-antenne-hall-of-fame-2026.jpg" },
+    { "title": "Wacken Metal Battle Austria", "icon": "trophy", "logo": "wacken-metal-battle-logo", "artist": "Metternich", "year": 2023, "detail": "Winner of the national final, played Wacken Open Air 2023", "url": "/assets/images/awards/wacken-metal-battle-2023.jpg" }
+  ],
+  "tv": [
+    { "title": "Musiktipp", "channel": "PULS 4", "artist": "Metternich", "year": 2021, "detail": "Featured twice as the PULS 4 music tip", "videos": ["https://www.youtube.com/watch?v=Fs2BimozRfY", "https://www.youtube.com/watch?v=H62pTmTYlZU"] },
+    { "title": "Die Brieflosshow", "channel": "ORF", "artist": "Metternich", "year": 2018, "detail": "Live guest performance" },
+    { "title": "Friday Night Videocorner", "channel": "PULS 4", "artist": "Brewtality", "year": 2009, "detail": "Red Bull Brandwagen feature, live at Naschmarkt, Strandbad Podersdorf and Rathausplatz", "url": "https://www.youtube.com/watch?v=MttvLxrT9IE" },
+    { "title": "AutArt", "channel": "OKTO", "artist": "Brewtality", "year": 2009, "detail": "TV feature", "url": "https://www.facebook.com/BREWTALITYROCK/videos/311073279972/" },
+    { "title": "Go! Das Motormagazin", "channel": "SAT.1 Österreich", "artist": "Brewtality", "year": null, "detail": "Band feature", "url": "https://www.facebook.com/BREWTALITYROCK/videos/311084374972/" }
+  ],
   "releases": [
     { "title": "Retourkutsche", "artist": "Metternich", "year": 2026, "type": "Album", "role": "Bass & Backing Vocals", "cover": "retourkutsche", "url": "https://www.metternich.rocks/musik/retourkutsche/", "shop": "https://metternich.rocks/produkt-kategorie/tonkunst/", "links": {"spotify": "https://open.spotify.com/album/68nn0PRjQg3gq6xt8OmQt6", "apple": "https://music.apple.com/at/album/retourkutsche/6805277632", "amazon": "https://music.amazon.de/albums/B0HGK62P3D", "deezer": "https://www.deezer.com/album/1063052121", "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_lKpAIEjfR-yIOjDoNiDC6qj7DIN9GHcbQ", "tidal": "https://tidal.com/album/555562155"} },
     { "title": "Still Here", "artist": "Crazykav", "year": 2026, "type": "Album", "role": "Drums", "cover": "still-here", "url": "https://open.spotify.com/album/0qkIAQvheyjtBXWEFIhBLw", "links": {"spotify": "https://open.spotify.com/album/0qkIAQvheyjtBXWEFIhBLw", "deezer": "https://www.deezer.com/album/1057645702"} },

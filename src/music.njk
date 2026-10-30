@@ -119,6 +119,57 @@ hero: true
 
 <div class="wrap">
   <section>
+    <h2>Awards</h2>
+    <ul class="entry-list">
+      {% for a in music.awards %}
+      <li class="entry award">
+        {% if a.logo %}
+        <picture class="award-badge award-badge--logo">
+          <source type="image/avif" srcset="/assets/images/awards/{{ a.logo }}.avif">
+          <img src="/assets/images/awards/{{ a.logo }}.jpg" alt="" width="350" height="350" loading="lazy">
+        </picture>
+        {% else %}
+        {# Icons: Lucide (ISC) #}
+        <span class="award-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            {% if a.icon == "trophy" %}
+            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+            {% else %}
+            <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/>
+            {% endif %}
+          </svg>
+        </span>
+        {% endif %}
+        <div>
+          <div class="entry-title">{% if a.url %}<a class="link-underline" href="{{ a.url }}">{{ a.title }}</a>{% else %}{{ a.title }}{% endif %}</div>
+          <div class="entry-meta">{{ a.year }} &middot; {{ a.artist }} &middot; {{ a.detail }}</div>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h2>On TV</h2>
+    <ul class="entry-list">
+      {% for t in music.tv %}
+      <li class="entry award">
+        {# Icon: Lucide (ISC) #}
+        <span class="award-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><rect width="20" height="15" x="2" y="7" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>
+        </span>
+        <div>
+          <div class="entry-title">{% if t.url %}<a class="link-underline" href="{{ t.url }}">{{ t.title }}</a>{% else %}{{ t.title }}{% endif %}</div>
+          <div class="entry-meta">{% if t.year %}{{ t.year }} &middot; {% endif %}{{ t.artist }}{% if t.channel != t.title %} &middot; {{ t.channel }}{% endif %}</div>
+          {% if t.detail %}<div class="entry-meta">{{ t.detail }}</div>{% endif %}
+          {% if t.videos %}<div class="entry-meta">{% for v in t.videos %}<a class="link-underline" href="{{ v }}">Video {{ loop.index }}</a>{% if not loop.last %} &middot; {% endif %}{% endfor %}</div>{% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
     <h2>Past projects</h2>
     <ul class="entry-list">
       {% for p in music.pastProjects %}

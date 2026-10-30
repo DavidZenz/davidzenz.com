@@ -5,12 +5,10 @@ import sharp from "sharp";
 const SRC_DIR = new URL("../images-src/", import.meta.url);
 const OUT_DIR = new URL("../src/assets/images/", import.meta.url);
 
-const COVERS_SRC_DIR = new URL("covers/", SRC_DIR);
-const COVERS_OUT_DIR = new URL("covers/", OUT_DIR);
-
 const PORTRAIT_WIDTH = 1000;
 const LANDSCAPE_HEIGHT = 1100;
 const COVER_SIZE = 480;
+const AWARD_WIDTH = 1080;
 
 async function main() {
   await mkdir(OUT_DIR, { recursive: true });
@@ -42,29 +40,35 @@ async function main() {
   }
 
   // Release covers: small square thumbnails for the music page
-  await mkdir(COVERS_OUT_DIR, { recursive: true });
-  const covers = (await readdir(COVERS_SRC_DIR)).filter((f) =>
+  await buildSubdir("covers", { width: COVER_SIZE, height: COVER_SIZE, fit: "cover", withoutEnlargement: true });
+
+  // Award logos and graphics: keep aspect ratio
+  await buildSubdir("awards", { width: AWARD_WIDTH, withoutEnlargement: true });
+}
+
+async function buildSubdir(dir, resizeOpts) {
+  const srcDir = new URL(`${dir}/`, SRC_DIR);
+  const outDir = new URL(`${dir}/`, OUT_DIR);
+  await mkdir(outDir, { recursive: true });
+  const files = (await readdir(srcDir)).filter((f) =>
     [".jpg", ".jpeg", ".png"].includes(extname(f).toLowerCase())
   );
 
-  for (const file of covers) {
+  for (const file of files) {
     const name = basename(file, extname(file));
-    const input = sharp(new URL(file, COVERS_SRC_DIR).pathname).resize(COVER_SIZE, COVER_SIZE, {
-      fit: "cover",
-      withoutEnlargement: true,
-    });
+    const input = sharp(new URL(file, srcDir).pathname).resize(resizeOpts);
 
     await input
       .clone()
       .avif({ quality: 64 })
-      .toFile(join(new URL(COVERS_OUT_DIR).pathname, `${name}.avif`));
+      .toFile(join(outDir.pathname, `${name}.avif`));
 
     await input
       .clone()
       .jpeg({ quality: 80, mozjpeg: true })
-      .toFile(join(new URL(COVERS_OUT_DIR).pathname, `${name}.jpg`));
+      .toFile(join(outDir.pathname, `${name}.jpg`));
 
-    console.log(`[build-images] covers/${file} -> covers/${name}.avif + covers/${name}.jpg`);
+    console.log(`[build-images] ${dir}/${file} -> ${dir}/${name}.avif + ${dir}/${name}.jpg`);
   }
 }
 
