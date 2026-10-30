@@ -8,6 +8,7 @@
     "fetch:gigs": "node scripts/fetch-gigs.mjs",
     "fetch:races": "node scripts/fetch-races.mjs",
     "fetch:running-stats": "node scripts/fetch-running-stats.mjs",
+    "fetch:running-history": "node scripts/fetch-running-history.mjs",
     "fetch:publications": "node scripts/fetch-publications.mjs",
     "fetch:project-topics": "node scripts/fetch-project-topics.mjs",
     "build:images": "node scripts/build-images.mjs",

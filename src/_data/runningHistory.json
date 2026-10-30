@@ -1,0 +1,705 @@
+{
+  "fetchedAt": "2026-08-28T15:47:36.897Z",
+  "monthly": [
+    {
+      "month": "2014-12",
+      "km": 10.5,
+      "cumulativeKm": 10.5
+    },
+    {
+      "month": "2015-01",
+      "km": 204.4,
+      "cumulativeKm": 214.9
+    },
+    {
+      "month": "2015-02",
+      "km": 340.8,
+      "cumulativeKm": 555.7
+    },
+    {
+      "month": "2015-03",
+      "km": 570.5,
+      "cumulativeKm": 1126.2
+    },
+    {
+      "month": "2015-04",
+      "km": 219.4,
+      "cumulativeKm": 1345.6
+    },
+    {
+      "month": "2015-05",
+      "km": 6.3,
+      "cumulativeKm": 1351.9
+    },
+    {
+      "month": "2015-06",
+      "km": 50.8,
+      "cumulativeKm": 1402.7
+    },
+    {
+      "month": "2015-07",
+      "km": 117.6,
+      "cumulativeKm": 1520.3
+    },
+    {
+      "month": "2015-08",
+      "km": 96.4,
+      "cumulativeKm": 1616.7
+    },
+    {
+      "month": "2015-09",
+      "km": 142.6,
+      "cumulativeKm": 1759.3
+    },
+    {
+      "month": "2015-10",
+      "km": 79.8,
+      "cumulativeKm": 1839.1
+    },
+    {
+      "month": "2015-11",
+      "km": 17.8,
+      "cumulativeKm": 1856.9
+    },
+    {
+      "month": "2015-12",
+      "km": 29.7,
+      "cumulativeKm": 1886.6
+    },
+    {
+      "month": "2016-01",
+      "km": 225,
+      "cumulativeKm": 2111.6
+    },
+    {
+      "month": "2016-02",
+      "km": 247.8,
+      "cumulativeKm": 2359.4
+    },
+    {
+      "month": "2016-03",
+      "km": 279.8,
+      "cumulativeKm": 2639.2
+    },
+    {
+      "month": "2016-04",
+      "km": 167.6,
+      "cumulativeKm": 2806.8
+    },
+    {
+      "month": "2016-05",
+      "km": 35.9,
+      "cumulativeKm": 2842.7
+    },
+    {
+      "month": "2016-06",
+      "km": 170.7,
+      "cumulativeKm": 3013.4
+    },
+    {
+      "month": "2016-07",
+      "km": 108.1,
+      "cumulativeKm": 3121.5
+    },
+    {
+      "month": "2016-08",
+      "km": 62.2,
+      "cumulativeKm": 3183.7
+    },
+    {
+      "month": "2016-09",
+      "km": 71.8,
+      "cumulativeKm": 3255.5
+    },
+    {
+      "month": "2016-10",
+      "km": 53.8,
+      "cumulativeKm": 3309.3
+    },
+    {
+      "month": "2016-11",
+      "km": 30.3,
+      "cumulativeKm": 3339.6
+    },
+    {
+      "month": "2016-12",
+      "km": 121.6,
+      "cumulativeKm": 3461.2
+    },
+    {
+      "month": "2017-01",
+      "km": 76.2,
+      "cumulativeKm": 3537.4
+    },
+    {
+      "month": "2017-02",
+      "km": 348.8,
+      "cumulativeKm": 3886.2
+    },
+    {
+      "month": "2017-03",
+      "km": 292.3,
+      "cumulativeKm": 4178.5
+    },
+    {
+      "month": "2017-04",
+      "km": 230.2,
+      "cumulativeKm": 4408.7
+    },
+    {
+      "month": "2017-05",
+      "km": 125,
+      "cumulativeKm": 4533.7
+    },
+    {
+      "month": "2017-06",
+      "km": 136.8,
+      "cumulativeKm": 4670.5
+    },
+    {
+      "month": "2017-07",
+      "km": 105,
+      "cumulativeKm": 4775.5
+    },
+    {
+      "month": "2017-08",
+      "km": 210,
+      "cumulativeKm": 4985.5
+    },
+    {
+      "month": "2017-09",
+      "km": 106.7,
+      "cumulativeKm": 5092.2
+    },
+    {
+      "month": "2017-10",
+      "km": 163.3,
+      "cumulativeKm": 5255.5
+    },
+    {
+      "month": "2017-11",
+      "km": 117.2,
+      "cumulativeKm": 5372.7
+    },
+    {
+      "month": "2017-12",
+      "km": 45.5,
+      "cumulativeKm": 5418.2
+    },
+    {
+      "month": "2018-01",
+      "km": 145.8,
+      "cumulativeKm": 5564
+    },
+    {
+      "month": "2018-02",
+      "km": 238.3,
+      "cumulativeKm": 5802.3
+    },
+    {
+      "month": "2018-03",
+      "km": 310.7,
+      "cumulativeKm": 6113
+    },
+    {
+      "month": "2018-04",
+      "km": 218,
+      "cumulativeKm": 6331
+    },
+    {
+      "month": "2018-05",
+      "km": 92.1,
+      "cumulativeKm": 6423.1
+    },
+    {
+      "month": "2018-06",
+      "km": 81.2,
+      "cumulativeKm": 6504.3
+    },
+    {
+      "month": "2018-07",
+      "km": 117.8,
+      "cumulativeKm": 6622.1
+    },
+    {
+      "month": "2018-08",
+      "km": 232.3,
+      "cumulativeKm": 6854.4
+    },
+    {
+      "month": "2018-09",
+      "km": 276.5,
+      "cumulativeKm": 7130.9
+    },
+    {
+      "month": "2018-10",
+      "km": 195.5,
+      "cumulativeKm": 7326.4
+    },
+    {
+      "month": "2018-11",
+      "km": 128.6,
+      "cumulativeKm": 7455
+    },
+    {
+      "month": "2018-12",
+      "km": 126.1,
+      "cumulativeKm": 7581.1
+    },
+    {
+      "month": "2019-01",
+      "km": 125.1,
+      "cumulativeKm": 7706.2
+    },
+    {
+      "month": "2019-02",
+      "km": 198.4,
+      "cumulativeKm": 7904.6
+    },
+    {
+      "month": "2019-03",
+      "km": 324.3,
+      "cumulativeKm": 8228.9
+    },
+    {
+      "month": "2019-04",
+      "km": 170.4,
+      "cumulativeKm": 8399.3
+    },
+    {
+      "month": "2019-05",
+      "km": 193.4,
+      "cumulativeKm": 8592.7
+    },
+    {
+      "month": "2019-06",
+      "km": 254,
+      "cumulativeKm": 8846.7
+    },
+    {
+      "month": "2019-07",
+      "km": 173.5,
+      "cumulativeKm": 9020.2
+    },
+    {
+      "month": "2019-08",
+      "km": 197.4,
+      "cumulativeKm": 9217.6
+    },
+    {
+      "month": "2019-09",
+      "km": 84.7,
+      "cumulativeKm": 9302.3
+    },
+    {
+      "month": "2019-10",
+      "km": 122.9,
+      "cumulativeKm": 9425.2
+    },
+    {
+      "month": "2019-11",
+      "km": 102.3,
+      "cumulativeKm": 9527.5
+    },
+    {
+      "month": "2019-12",
+      "km": 48.4,
+      "cumulativeKm": 9575.9
+    },
+    {
+      "month": "2020-01",
+      "km": 71.1,
+      "cumulativeKm": 9647
+    },
+    {
+      "month": "2020-02",
+      "km": 88.3,
+      "cumulativeKm": 9735.3
+    },
+    {
+      "month": "2020-03",
+      "km": 364.6,
+      "cumulativeKm": 10099.9
+    },
+    {
+      "month": "2020-04",
+      "km": 450.1,
+      "cumulativeKm": 10550
+    },
+    {
+      "month": "2020-05",
+      "km": 387.9,
+      "cumulativeKm": 10937.9
+    },
+    {
+      "month": "2020-06",
+      "km": 12.5,
+      "cumulativeKm": 10950.4
+    },
+    {
+      "month": "2020-07",
+      "km": 7.3,
+      "cumulativeKm": 10957.7
+    },
+    {
+      "month": "2020-08",
+      "km": 94.6,
+      "cumulativeKm": 11052.3
+    },
+    {
+      "month": "2020-09",
+      "km": 160.2,
+      "cumulativeKm": 11212.5
+    },
+    {
+      "month": "2020-10",
+      "km": 251.5,
+      "cumulativeKm": 11464
+    },
+    {
+      "month": "2020-11",
+      "km": 382.8,
+      "cumulativeKm": 11846.8
+    },
+    {
+      "month": "2020-12",
+      "km": 424.4,
+      "cumulativeKm": 12271.2
+    },
+    {
+      "month": "2021-01",
+      "km": 432.3,
+      "cumulativeKm": 12703.5
+    },
+    {
+      "month": "2021-02",
+      "km": 261.7,
+      "cumulativeKm": 12965.2
+    },
+    {
+      "month": "2021-03",
+      "km": 193.2,
+      "cumulativeKm": 13158.4
+    },
+    {
+      "month": "2021-04",
+      "km": 401.2,
+      "cumulativeKm": 13559.6
+    },
+    {
+      "month": "2021-05",
+      "km": 249.5,
+      "cumulativeKm": 13809.1
+    },
+    {
+      "month": "2021-06",
+      "km": 246.8,
+      "cumulativeKm": 14055.9
+    },
+    {
+      "month": "2021-07",
+      "km": 388.7,
+      "cumulativeKm": 14444.6
+    },
+    {
+      "month": "2021-08",
+      "km": 469,
+      "cumulativeKm": 14913.6
+    },
+    {
+      "month": "2021-09",
+      "km": 261.8,
+      "cumulativeKm": 15175.4
+    },
+    {
+      "month": "2021-10",
+      "km": 349.6,
+      "cumulativeKm": 15525
+    },
+    {
+      "month": "2021-11",
+      "km": 58.3,
+      "cumulativeKm": 15583.3
+    },
+    {
+      "month": "2021-12",
+      "km": 88.2,
+      "cumulativeKm": 15671.5
+    },
+    {
+      "month": "2022-01",
+      "km": 296.8,
+      "cumulativeKm": 15968.3
+    },
+    {
+      "month": "2022-02",
+      "km": 297,
+      "cumulativeKm": 16265.3
+    },
+    {
+      "month": "2022-03",
+      "km": 160.5,
+      "cumulativeKm": 16425.8
+    },
+    {
+      "month": "2022-04",
+      "km": 243.8,
+      "cumulativeKm": 16669.6
+    },
+    {
+      "month": "2022-05",
+      "km": 212,
+      "cumulativeKm": 16881.6
+    },
+    {
+      "month": "2022-06",
+      "km": 281.3,
+      "cumulativeKm": 17162.9
+    },
+    {
+      "month": "2022-07",
+      "km": 324,
+      "cumulativeKm": 17486.9
+    },
+    {
+      "month": "2022-08",
+      "km": 287.6,
+      "cumulativeKm": 17774.5
+    },
+    {
+      "month": "2022-09",
+      "km": 224.3,
+      "cumulativeKm": 17998.8
+    },
+    {
+      "month": "2022-10",
+      "km": 96.8,
+      "cumulativeKm": 18095.6
+    },
+    {
+      "month": "2022-11",
+      "km": 259.7,
+      "cumulativeKm": 18355.3
+    },
+    {
+      "month": "2022-12",
+      "km": 244.7,
+      "cumulativeKm": 18600
+    },
+    {
+      "month": "2023-01",
+      "km": 257.4,
+      "cumulativeKm": 18857.4
+    },
+    {
+      "month": "2023-02",
+      "km": 407.7,
+      "cumulativeKm": 19265.1
+    },
+    {
+      "month": "2023-03",
+      "km": 276,
+      "cumulativeKm": 19541.1
+    },
+    {
+      "month": "2023-04",
+      "km": 266,
+      "cumulativeKm": 19807.1
+    },
+    {
+      "month": "2023-05",
+      "km": 200.6,
+      "cumulativeKm": 20007.7
+    },
+    {
+      "month": "2023-06",
+      "km": 195.5,
+      "cumulativeKm": 20203.2
+    },
+    {
+      "month": "2023-07",
+      "km": 216.4,
+      "cumulativeKm": 20419.6
+    },
+    {
+      "month": "2023-08",
+      "km": 211.7,
+      "cumulativeKm": 20631.3
+    },
+    {
+      "month": "2023-09",
+      "km": 216.6,
+      "cumulativeKm": 20847.9
+    },
+    {
+      "month": "2023-10",
+      "km": 239.9,
+      "cumulativeKm": 21087.8
+    },
+    {
+      "month": "2023-11",
+      "km": 258,
+      "cumulativeKm": 21345.8
+    },
+    {
+      "month": "2023-12",
+      "km": 270.3,
+      "cumulativeKm": 21616.1
+    },
+    {
+      "month": "2024-01",
+      "km": 363.9,
+      "cumulativeKm": 21980
+    },
+    {
+      "month": "2024-02",
+      "km": 347.8,
+      "cumulativeKm": 22327.8
+    },
+    {
+      "month": "2024-03",
+      "km": 418.5,
+      "cumulativeKm": 22746.3
+    },
+    {
+      "month": "2024-04",
+      "km": 223.8,
+      "cumulativeKm": 22970.1
+    },
+    {
+      "month": "2024-05",
+      "km": 317.1,
+      "cumulativeKm": 23287.2
+    },
+    {
+      "month": "2024-06",
+      "km": 265.1,
+      "cumulativeKm": 23552.3
+    },
+    {
+      "month": "2024-07",
+      "km": 318.5,
+      "cumulativeKm": 23870.8
+    },
+    {
+      "month": "2024-08",
+      "km": 410.5,
+      "cumulativeKm": 24281.3
+    },
+    {
+      "month": "2024-09",
+      "km": 429.3,
+      "cumulativeKm": 24710.6
+    },
+    {
+      "month": "2024-10",
+      "km": 97.7,
+      "cumulativeKm": 24808.3
+    },
+    {
+      "month": "2024-11",
+      "km": 230.2,
+      "cumulativeKm": 25038.5
+    },
+    {
+      "month": "2024-12",
+      "km": 301.4,
+      "cumulativeKm": 25339.9
+    },
+    {
+      "month": "2025-01",
+      "km": 55.7,
+      "cumulativeKm": 25395.6
+    },
+    {
+      "month": "2025-03",
+      "km": 3.7,
+      "cumulativeKm": 25399.3
+    },
+    {
+      "month": "2025-04",
+      "km": 38.1,
+      "cumulativeKm": 25437.4
+    },
+    {
+      "month": "2025-05",
+      "km": 63.3,
+      "cumulativeKm": 25500.7
+    },
+    {
+      "month": "2025-06",
+      "km": 155.4,
+      "cumulativeKm": 25656.1
+    },
+    {
+      "month": "2025-07",
+      "km": 160.9,
+      "cumulativeKm": 25817
+    },
+    {
+      "month": "2025-08",
+      "km": 172.2,
+      "cumulativeKm": 25989.2
+    },
+    {
+      "month": "2025-09",
+      "km": 151.7,
+      "cumulativeKm": 26140.9
+    },
+    {
+      "month": "2025-10",
+      "km": 94,
+      "cumulativeKm": 26234.9
+    },
+    {
+      "month": "2025-11",
+      "km": 205.4,
+      "cumulativeKm": 26440.3
+    },
+    {
+      "month": "2025-12",
+      "km": 188.3,
+      "cumulativeKm": 26628.6
+    },
+    {
+      "month": "2026-01",
+      "km": 202.9,
+      "cumulativeKm": 26831.5
+    },
+    {
+      "month": "2026-02",
+      "km": 207.2,
+      "cumulativeKm": 27038.7
+    },
+    {
+      "month": "2026-03",
+      "km": 327.7,
+      "cumulativeKm": 27366.4
+    },
+    {
+      "month": "2026-04",
+      "km": 230.2,
+      "cumulativeKm": 27596.6
+    },
+    {
+      "month": "2026-05",
+      "km": 201.4,
+      "cumulativeKm": 27798
+    },
+    {
+      "month": "2026-06",
+      "km": 219.4,
+      "cumulativeKm": 28017.4
+    },
+    {
+      "month": "2026-07",
+      "km": 116.9,
+      "cumulativeKm": 28134.3
+    },
+    {
+      "month": "2026-08",
+      "km": 221.8,
+      "cumulativeKm": 28356.1
+    }
+  ]
+}
